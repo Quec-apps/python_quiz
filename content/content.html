@@ -231,6 +231,9 @@
         </div>
     </div>
     <script src="res/prism/prism.js"></script>
+    <audio src="res/audio/correct.mp3" id="correct-aud"></audio>
+    <audio src="res/audio/wrong.mp3" id="wrong-aud"></audio>
+    <audio src="res/audio/button.mp3" id="button-aud"></audio>
     <script>
         setTimeout(() => { $(".top").css({ transform: 'scale(1)', opacity: '1' }); }, 100);
         setTimeout(() => { $(".mid").css({ transform: 'scale(1)', opacity: '1' }); }, 200);
@@ -320,6 +323,7 @@
         Append();
 
         $("#ans").click(function () {
+            document.getElementById('correct-aud').play();
             console.log("Correct!")
             $("#ans").css({ backgroundColor: 'green', color: 'white' });
             setTimeout(() => {
@@ -342,13 +346,14 @@
             }
         });
         $(".noans").click(function () {
-            console.log("Failed!");
+            document.getElementById('wrong-aud').play();
             $(this).css({ backgroundColor: 'red', color: 'white' });
             wrongDict[openedType]++;
             localStorage.setItem('wrongDict', JSON.stringify(wrongDict));
         });
 
         $(".com-next").click(function () {
+            document.getElementById('button-aud').play();
             setTimeout(() => {
                 $(".win-ct-bg").css({ transform: 'translateY(100%)' });
                 $(".win-bg").fadeOut();
