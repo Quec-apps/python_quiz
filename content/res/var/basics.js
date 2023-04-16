@@ -799,8 +799,8 @@ window["q"+a] =`
 x = (1, 2, 3)
 y = x[1:2]
 print(y)`;
-window["ans"+a] = '(2)';
-window["noans1"+a] = '(1)';
+window["ans"+a] = '(2,)';
+window["noans1"+a] = '(1,)';
 window["noans2"+a] = '(2, 3)';
 window["noans3"+a] = 'None of the above';
 
@@ -934,12 +934,24 @@ window["noans3"+a] = 'None of the above';
 
 a++;
 window["type"+a] = "4";
+window["des"+a] = 'What is the output of the following code';
+window["q"+a] =`
+x = False
+y = False
+print(x+y)`;
+window["ans"+a] = '0';
+window["noans1"+a] = '1';
+window["noans2"+a] = '2';
+window["noans3"+a] = 'TypeError';
+
+a++;
+window["type"+a] = "4";
 window["des"+a] = 'Which of the following is NOT a valid way to create a boolean variable in Python?';
 window["q"+a] =``;
 window["ans"+a] = 'x = 0';
 window["noans1"+a] = 'x = True';
 window["noans2"+a] = 'x = False';
-window["noans3"+a] = 'x = 1';
+window["noans3"+a] = 'None of the above';
 
 a++;
 window["type"+a] = "4";
@@ -984,10 +996,10 @@ window["q"+a] =`
 x = "10.5"
 y = 3
 print(int(x)*y)`;
-window["noans1"+a] = '31.5';
+window["noans1"+a] = 'ValueError';
 window["noans2"+a] = '10.5';
 window["noans3"+a] = '30.5';
-window["noans4"+a] = 'None of the above';
+window["noans4"+a] = '101010';
 
 a++;
 window["type"+a] = "4";
@@ -1068,8 +1080,8 @@ window["q"+a] =`
 x = "0"
 y = False
 print(bool(x) == y)`;
-window["ans"+a] = 'True';
-window["noans1"+a] = 'False';
+window["ans"+a] = 'False';
+window["noans1"+a] = 'True';
 window["noans2"+a] = 'TypeError';
 window["noans3"+a] = 'None of the above';
 
@@ -1125,8 +1137,8 @@ a++;
 window["type"+a] = "4";
 window["des"+a] = 'Which of the following is a valid way to convert a float to an integer in Python?';
 window["q"+a] =``;
-window["ans"+a] = 'int(float())';
-window["noans1"+a] = 'int(float)';
+window["ans"+a] = 'int(float)';
+window["noans1"+a] = 'float.int';
 window["noans2"+a] = 'float.int()';
 window["noans3"+a] = 'None of the above';
 
@@ -1149,9 +1161,9 @@ window["q"+a] =`
 x = 10.5
 y = 3
 print(int(x/y))`;
-window["ans"+a] = '3.0';
+window["ans"+a] = '3';
 window["noans1"+a] = '3.5';
-window["noans2"+a] = '3';
+window["noans2"+a] = '3.0';
 window["noans3"+a] = 'None of the above';
 
 a++;
@@ -1173,10 +1185,10 @@ window["q"+a] =`
 x = 10.5
 y = 3
 print(round(x/y))`;
-window["ans"+a] = '3';
+window["ans"+a] = '4';
 window["noans1"+a] = '3.5';
-window["noans2"+a] = '3.0';
-window["noans3"+a] = 'None of the above';
+window["noans2"+a] = '3';
+window["noans3"+a] = '5';
 
 a++;
 window["type"+a] = "4";
@@ -1209,9 +1221,9 @@ window["q"+a] =`
 x = 10.5
 y = 3
 print(int(x/float(y)))`;
-window["ans"+a] = '3.0';
+window["ans"+a] = '3';
 window["noans1"+a] = '3.5';
-window["noans2"+a] = '3';
+window["noans2"+a] = '3.0';
 window["noans3"+a] = 'None of the above';
 
 a++;
@@ -1278,7 +1290,7 @@ window["q"+a] =`
 a = "Hello"
 b = int(a)
 print(b)`;
-window["ans"+a] = 'TypeError';
+window["ans"+a] = 'ValueError';
 window["noans1"+a] = '"Hello"';
 window["noans2"+a] = '0';
 window["noans3"+a] = 'None of the above';
@@ -1290,7 +1302,7 @@ window["q"+a] =`
 a = "3.14"
 b = int(a)
 print(b)`;
-window["ans"+a] = 'TypeError';
+window["ans"+a] = 'ValueError';
 window["noans1"+a] = '3';
 window["noans2"+a] = '"3"';
 window["noans3"+a] = 'None of the above';
