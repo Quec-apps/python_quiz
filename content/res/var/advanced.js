@@ -56,7 +56,7 @@ def count():
 
 for num in count():
     print(num)`;
-window["ans"+f] = `1, 2, 3, 4, 5`;
+window["ans"+f] = `1 2 3 4 5`;
 window["noans1"+f] = `[1, 2, 3, 4, 5]`;
 window["noans2"+f] = `(1, 2, 3, 4, 5)`;
 window["noans3"+f] = `None of the above`;
@@ -78,16 +78,16 @@ window["noans1"+f] = `5`;
 window["noans2"+f] = `3`;
 window["noans3"+f] = `None of the above`;
 
-f++;
-window["type"+f] = "4";
-window["des"+f] = `
-Which of the following is a valid way to define a decorator in Python?
-`;
-window["q"+f] =``;
-window["ans"+f] = `def my_decorator(func): return lambda: func()`;
-window["noans1"+f] = `def my_decorator(func): return func`;
-window["noans2"+f] = `def my_decorator(func): return func()`;
-window["noans3"+f] = `def my_decorator(func): func()`;
+// f++;
+// window["type"+f] = "4";
+// window["des"+f] = `
+// Which of the following is a valid way to define a decorator in Python?
+// `;
+// window["q"+f] =``;
+// window["ans"+f] = `def my_decorator(func): return lambda: func()`;
+// window["noans1"+f] = `def my_decorator(func): return func`;
+// window["noans2"+f] = `def my_decorator(func): return func()`;
+// window["noans3"+f] = `def my_decorator(func): func()`;
 
 f++;
 window["type"+f] = "4";
@@ -185,12 +185,12 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r'(\\w+) ☺'
+pattern = r'(\\w+)'
 text = 'John Smith, John Johnson.'
 
 result = re.findall(pattern, text)
 print(result)`;
-window["ans"+f] = `['John', 'John']`;
+window["ans"+f] = `['John', 'Smith', 'John', 'Johnson']`;
 window["noans1"+f] = `['John']`;
 window["noans2"+f] = `['Smith', 'Johnson']`;
 window["noans3"+f] = `None of the above`;
@@ -272,8 +272,8 @@ def fibonacci(n):
         return fibonacci(n-1) + fibonacci(n-2)
 
 print(fibonacci(10))`;
-window["ans"+f] = `45`;
-window["noans1"+f] = `55`;
+window["ans"+f] = `55`;
+window["noans1"+f] = `45`;
 window["noans2"+f] = `65`;
 window["noans3"+f] = `75`;
 
@@ -297,8 +297,8 @@ print(c1())
 print(c1())
 print(c2())
 print(c2())`;
-window["ans"+f] = `1, 2, 2, 3`;
-window["noans1"+f] = `1, 2, 1, 2`;
+window["ans"+f] = `1, 2, 1, 2`;
+window["noans1"+f] = `1 2, 2, 3`;
 window["noans2"+f] = `1, 1, 1, 1`;
 window["noans3"+f] = `1, 1, 2, 2`;
 
@@ -417,10 +417,10 @@ data = [(1, 2), (3, 4), (5, 6)]
 
 result = list(map(add, *data))
 print(result)`;
-window["ans"+f] = `[4, 7, 11]`;
+window["ans"+f] = `TypeError`;
 window["noans1"+f] = `[9, 12]`;
 window["noans2"+f] = `[(1, 3, 5), (2, 4, 6)]`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `[4, 7, 11]`;
 
 f++;
 window["type"+f] = "4";
@@ -430,7 +430,7 @@ window["q"+f] =`
 import re
 
 pattern = r'\\d+'
-text = 'There are 10 types of people: those who understand binary and those who don't.'
+text = "There are 10 types of people: those who understand binary and those who don't."
 
 result = re.findall(pattern, text)
 print(result)`;
@@ -476,9 +476,9 @@ result2 = re.search(pattern, text2)
 
 print(result1)
 print(result2)`;
-window["ans"+f] = `<re.Match object>, <re.Match object>`;
+window["ans"+f] = `<re.Match object; span=(0, 3), match='123'>, None`;
 window["noans1"+f] = `<re.Match object at 0x...>, <re.Match object at 0x...>`;
-window["noans2"+f] = `<re.Match object; span=(0, 3), match='123'>, None`;
+window["noans2"+f] = `<re.Match object>, <re.Match object>`;
 window["noans3"+f] = `None, <re.Match object; span=(0, 3), match='123'>`;
 
 f++;
@@ -489,7 +489,7 @@ window["q"+f] =`
 import re
 
 pattern = r'\\d+'
-text = 'There are 10 types of people: those who understand binary and those who don't.'
+text = "There are 10 types of people: those who understand binary and those who don't."
 
 result = re.sub(pattern, '42', text)
 print(result)`;
@@ -505,15 +505,15 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r'(\\w+)-☺'
+pattern = r'(\\w+)-good'
 text = 'good-good-good-good-bad'
 
-result = re.sub(pattern, r'☺', text)
+result = re.sub(pattern, r'hello', text)
 print(result)`;
-window["ans"+f] = `'good-good-bad'`;
-window["noans1"+f] = `'good-bad'`;
-window["noans2"+f] = `'good-good-good-bad'`;
-window["noans3"+f] = `'good-good-good-good-bad'`;
+window["ans"+f] = `'hello-hello-bad'`;
+window["noans1"+f] = `'hello-bad'`;
+window["noans2"+f] = `'good-hello-good-bad'`;
+window["noans3"+f] = `'hello-hello-hello-hello-bad'`;
 
 f++;
 window["type"+f] = "4";
@@ -742,12 +742,12 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r\\w{4'
+pattern = r'\\w{4}'
 text = 'hello world how are you today'
 
 result = re.findall(pattern, text)
 print(result)`;
-window["ans"+f] = `['hello', 'world', 'today']`;
+window["ans"+f] = `['hell', 'worl', 'toda']`;
 window["noans1"+f] = `['how', 'you']`;
 window["noans2"+f] = `[]`;
 window["noans3"+f] = `None of the above`;
@@ -759,12 +759,12 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r\\w{4'
+pattern = r'\\w{4}'
 text = 'hello world how are you today'
 
 result = re.sub(pattern, '****', text)
 print(result)`;
-window["ans"+f] = `'**** **** how are **** today'`;
+window["ans"+f] = `'****o ****d how are you ****y'`;
 window["noans1"+f] = `'hello world how are you today'`;
 window["noans2"+f] = `'hello **** how are you ****'`;
 window["noans3"+f] = `None of the above`;
@@ -861,15 +861,15 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r'(\\w+) (☺)'
+pattern = r'(\\w+) (hello)'
 text = 'hello hello world world'
 
 result = re.findall(pattern, text)
 print(result)`;
-window["ans"+f] = `[('hello', 'hello'), ('world', 'world')]`;
+window["ans"+f] = `[('hello', 'hello')]`;
 window["noans1"+f] = `[('hello', ''), ('world', '')]`;
 window["noans2"+f] = `[('hello', 'world')]`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `None`;
 
 f++;
 window["type"+f] = "4";
@@ -878,15 +878,15 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r(\\w+.'
+pattern = r'(\\w+.)'
 text = 'hello world world hello'
 
 result = re.findall(pattern, text)
 print(result)`;
-window["ans"+f] = `[('hello', 'hello'), ('world', 'world')]`;
+window["ans"+f] = `['hello ', 'world ', 'world ', 'hello']`;
 window["noans1"+f] = `[('hello', 'world')]`;
 window["noans2"+f] = `[]`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `[('hello', 'hello'), ('world', 'world')]`;
 
 f++;
 window["type"+f] = "4";
@@ -929,17 +929,17 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r\\w{4'
+pattern = r'\\w{4}'
 text = 'hello world how are you today'
 
 result = re.finditer(pattern, text)
 
 for match in result:
     print(match.group(), match.start())`;
-window["ans"+f] = `hello 0, world 6, today 20`;
+window["ans"+f] = `hell 0, worl 6, toda 24`;
 window["noans1"+f] = `how 6, you 14`;
 window["noans2"+f] = `[]`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `None`;
 
 f++;
 window["type"+f] = "4";
@@ -948,17 +948,17 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r\\w{4'
+pattern = r'\\w{4}'
 text = 'hello world how are you today'
 
 result = re.finditer(pattern, text)
 
 for match in result:
     print(match.group(), match.end())`;
-window["ans"+f] = `hello 5, world 11, today 25`;
+window["ans"+f] = `hell 4 worl 10 toda 28`;
 window["noans1"+f] = `how 9, you 17`;
 window["noans2"+f] = `[]`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `hello 5, world 11, today 25`;
 
 f++;
 window["type"+f] = "4";
@@ -967,18 +967,18 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r\\w{4'
+pattern = r'\\w{4}'
 text = 'hello world how are you today'
 
 result = re.finditer(pattern, text)
 
 for match in result:
     print(match.group(), match.span())`;
-window["ans"+f] = `hello (0, 5), world (6, 11), today (20, 25)`;
+window["ans"+f] = `hell (0, 4) worl (6, 10) toda (24, 28)`;
 window["noans1"+f] = `how (6, 9), you (14, 17)`;
 window["noans2"+f] = `[]`;
-window["noans3"+f] = `None of the above`;
-
+window["noans3"+f] = `hello (0, 5), world (6, 11), today (20, 25)`;
+console.log(f)
 f++;
 window["type"+f] = "4";
 window["des"+f] = `
@@ -986,15 +986,15 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r\\w{4'
+pattern = r'\\w{4}'
 text = 'hello world how are you today'
 
 result = re.split(pattern, text)
 print(result)`;
-window["ans"+f] = `['hello world how', 'you', 'today']`;
+window["ans"+f] = `['', 'o ', 'd how are you ', 'y']`;
 window["noans1"+f] = `['', ' ', ' ', ' are ', ' ', '']`;
 window["noans2"+f] = `[]`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `['hello world how', 'you', 'today']`;
 
 f++;
 window["type"+f] = "4";
@@ -1025,8 +1025,8 @@ text = 'Today is the 30th of March, 2023.'
 
 result = re.sub(pattern, '31', text)
 print(result)`;
-window["ans"+f] = `Today is the 31th of March, 2023.`;
-window["noans1"+f] = `Today is the 31th of March, 31.`;
+window["ans"+f] = `Today is the 31th of March, 31.`;
+window["noans1"+f] = `Today is the 31th of March, 2023.`;
 window["noans2"+f] = `Today is the 31th of March, .`;
 window["noans3"+f] = `None of the above`;
 
@@ -1037,7 +1037,7 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r(\\w+'
+pattern = r'\\w+'
 text = 'hello world'
 
 result = re.findall(pattern, text)
@@ -1046,7 +1046,7 @@ window["ans"+f] = `['hello', 'world']`;
 window["noans1"+f] = `[('hello',), ('world',)]`;
 window["noans2"+f] = `[('hello', 'world')]`;
 window["noans3"+f] = `None of the above`;
-
+console.log(f)
 f++;
 window["type"+f] = "4";
 window["des"+f] = `
@@ -1054,15 +1054,15 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r(\\w+'
+pattern = r'\\w+'
 text = 'hello world'
 
-result = re.sub(pattern, r'☺!', text)
+result = re.sub(pattern, r'Hi!', text)
 print(result)`;
-window["ans"+f] = `hello! world!`;
-window["noans1"+f] = `hello!world!`;
-window["noans2"+f] = `hello world!`;
-window["noans3"+f] = `None of the above`;
+window["ans"+f] = `Hi! Hi!`;
+window["noans1"+f] = `Hi! Hi`;
+window["noans2"+f] = `hello Hi!`;
+window["noans3"+f] = `Hi! World`;
 
 f++;
 window["type"+f] = "4";
@@ -1071,15 +1071,15 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r(\\w+'
+pattern = r'\\w+'
 text = 'hello world'
 
 result = re.sub(pattern, r'!', text)
 print(result)`;
-window["ans"+f] = `hello!world!`;
+window["ans"+f] = `! !`;
 window["noans1"+f] = `hello! world!`;
 window["noans2"+f] = `hello world!`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `hello!world!`;
 
 f++;
 window["type"+f] = "4";
@@ -1088,15 +1088,15 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r(\\w+'
+pattern = r'\\w+'
 text = 'hello world'
 
 result = re.sub(pattern, r'☺!☺', text)
 print(result)`;
-window["ans"+f] = `hello!hello world!world`;
-window["noans1"+f] = `hello!world!hello!world`;
+window["ans"+f] = `Hi!Hello Hi!Hello`;
+window["noans1"+f] = `Hello!Hi!Hello!world`;
 window["noans2"+f] = `hello!world!hello world!world`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `hello!hello world!world`;
 
 f++;
 window["type"+f] = "4";
@@ -1108,12 +1108,12 @@ import re
 pattern = r'(\\w+)\\s(\\w+)'
 text = 'hello world'
 
-result = re.sub(pattern, r'☻ ☺', text)
+result = re.sub(pattern, r'world hello', text)
 print(result)`;
 window["ans"+f] = `world hello`;
 window["noans1"+f] = `worldhello`;
 window["noans2"+f] = `hello world`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `world hello hello world`;
 
 f++;
 window["type"+f] = "4";
@@ -1122,15 +1122,15 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = rca'
+pattern = r'cat'
 text = 'The cat is a domestic animal, but wild cats also exist.'
 
 result = re.findall(pattern, text)
 print(result)`;
-window["ans"+f] = `['cat']`;
+window["ans"+f] = `['cat', 'cat']`;
 window["noans1"+f] = `['The cat is a']`;
 window["noans2"+f] = `['cat', 'cats']`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `['cat']`;
 
 f++;
 window["type"+f] = "4";
@@ -1139,15 +1139,15 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = rcat(s)'
+pattern = r'cat(s)'
 text = 'The cat is a domestic animal, but wild cats also exist.'
 
 result = re.findall(pattern, text)
 print(result)`;
-window["ans"+f] = `['cat', 'cats']`;
+window["ans"+f] = `['s']`;
 window["noans1"+f] = `['cat', 's', 'cats']`;
 window["noans2"+f] = `['s', 's']`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `['cat', 'cats']`;
 
 f++;
 window["type"+f] = "4";
@@ -1156,15 +1156,15 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r(\\w)(\\w)'
+pattern = r'(\\w)(\\w)'
 text = 'hello world'
 
 result = re.findall(pattern, text)
 print(result)`;
-window["ans"+f] = `[('h', 'e'), ('l', 'o')]`;
+window["ans"+f] = `[('h', 'e'), ('l', 'l'), ('w', 'o'), ('r', 'l')]`;
 window["noans1"+f] = `[('h', 'e'), ('w', 'o')]`;
 window["noans2"+f] = `[('h', 'e'), ('l', 'l'), ('w', 'o')]`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `[('h', 'e'), ('l', 'o')]`;
 
 f++;
 window["type"+f] = "4";
@@ -1172,15 +1172,15 @@ window["des"+f] = `What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r(\\w)(\\w)\\w'
+pattern = r'(\\w)(\\w)\\w'
 text = 'hello world'
 
 result = re.findall(pattern, text)
 print(result)`;
-window["ans"+f] = `[('h', 'e'), ('l', 'o')]`;
+window["ans"+f] = `[('h', 'e'), ('w', 'o')]`;
 window["noans1"+f] = `[('he', 'l'), ('wo', 'r')]`;
 window["noans2"+f] = `[('h', 'e'), ('w', 'o')]`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `[('h', 'e'), ('l', 'o')]`;
 
 f++;
 window["type"+f] = "4";
@@ -1189,15 +1189,15 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r(\\w+\\s+☺'
+pattern = r'\\w+\\s+world'
 text = 'hello hello world world'
 
 result = re.findall(pattern, text)
 print(result)`;
-window["ans"+f] = `['hello hello', 'world world']`;
+window["ans"+f] = `['hello world']`;
 window["noans1"+f] = `['hello world']`;
 window["noans2"+f] = `['hello', 'world']`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `['hello hello', 'world world']`;
 
 f++;
 window["type"+f] = "4";
@@ -1231,7 +1231,7 @@ print(result.group())`;
 window["ans"+f] = `'1'`;
 window["noans1"+f] = `'123'`;
 window["noans2"+f] = `'1234567890'`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `1234567`;
 
 f++;
 window["type"+f] = "4";
@@ -1240,15 +1240,15 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r\\w{3'
+pattern = r'\\w{3}'
 text = 'hello world how are you today'
 
 result = re.findall(pattern, text)
 print(result)`;
-window["ans"+f] = `['how', 'you']`;
+window["ans"+f] = `['hel', 'wor', 'how', 'are', 'you', 'tod']`;
 window["noans1"+f] = `['how', 'are', 'you']`;
-window["noans2"+f] = `[]`;
-window["noans3"+f] = `None of the above`;
+window["noans2"+f] = `['how', 'are']`;
+window["noans3"+f] = `['how', 'you']`;
 
 f++;
 window["type"+f] = "4";
@@ -1257,7 +1257,7 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r(\\w+'
+pattern = r'\\w+'
 text = 'hello world'
 
 result = re.findall(pattern, text)
@@ -1265,7 +1265,7 @@ print(result)`;
 window["ans"+f] = `['hello', 'world']`;
 window["noans1"+f] = `[('hello',), ('world',)]`;
 window["noans2"+f] = `[('h', 'e', 'l', 'l', 'o'), ('w', 'o', 'r', 'l', 'd')]`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `[('hello',)]`;
 
 f++;
 window["type"+f] = "4";
@@ -1274,15 +1274,15 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r(\\w+)(\\W+)'
+pattern = r'(\\w+)(\\W+)'
 text = 'hello! hello world! world'
 
 result = re.findall(pattern, text)
 print(result)`;
-window["ans"+f] = `[('hello', '! '), ('world', '! ')]`;
+window["ans"+f] = `[('hello', '! '), ('hello', ' '), ('world', '! ')]`;
 window["noans1"+f] = `[('hello', '! '), ('world', '!'), ('world', '')]`;
 window["noans2"+f] = `[('hello', '!'), ('world', '!'), ('world', '')]`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `[('hello', '! '), ('world', '! ')]`;
 
 f++;
 window["type"+f] = "4";
@@ -1291,10 +1291,10 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = rcat(s)'
+pattern = r'cat(s)'
 text = 'The cat is a domestic animal, but wild cats also exist.'
 
-result = re.sub(pattern, 'dog\\1', text)
+result = re.sub(pattern, 'dogs', text)
 print(result)`;
 window["ans"+f] = `The dog is a domestic animal, but wild dogs also exist.`;
 window["noans1"+f] = `The dog is a domestic animal, but wild dogs also existes.`;
@@ -1308,7 +1308,7 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r(\\w+)(\\W+)(\\w+'
+pattern = r'(\\w+)(\\W+)(\\w+)'
 text = 'hello! world'
 
 result = re.search(pattern, text)
@@ -1316,7 +1316,7 @@ print(result.groups())`;
 window["ans"+f] = `('hello', '! ', 'world')`;
 window["noans1"+f] = `('hello', 'world')`;
 window["noans2"+f] = `('hello', '! ', '')`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `('hello', '! ', 'hello')`;
 
 f++;
 window["type"+f] = "4";
@@ -1325,7 +1325,7 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r(\\w+)(\\W+)(\\w+'
+pattern = r'(\\w+)(\\W+)(\\w+)'
 text = 'hello! world'
 
 result = re.findall(pattern, text)
@@ -1333,7 +1333,7 @@ print(result)`;
 window["ans"+f] = `[('hello', '! ', 'world')]`;
 window["noans1"+f] = `[('hello', '!', 'world')]`;
 window["noans2"+f] = `[('hello', '! '), ('world', '')]`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `None`;
 
 f++;
 window["type"+f] = "4";
@@ -1347,10 +1347,10 @@ text = 'hello! world'
 
 result = re.split(pattern, text)
 print(result)`;
-window["ans"+f] = `['hello', '!', 'world', '']`;
+window["ans"+f] = `['', 'hello', '! ', 'world', '']`;
 window["noans1"+f] = `['hello', '! ', 'world', '']`;
 window["noans2"+f] = `['hello', '! ', 'world']`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `['hello', '!', 'world', '']`;
 
 f++;
 window["type"+f] = "4";
@@ -1359,7 +1359,7 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r(\\w+'
+pattern = r'(\\w+)'
 text = 'hello world'
 
 result = re.sub(pattern, lambda x: x.group()[::-1], text)
@@ -1376,7 +1376,7 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r(\\w+'
+pattern = r'\\w+'
 text = 'hello world'
 
 result = re.subn(pattern, lambda x: x.group()[::-1], text)
@@ -1384,7 +1384,7 @@ print(result)`;
 window["ans"+f] = `('olleh dlrow', 2)`;
 window["noans1"+f] = `('olleh world', 1)`;
 window["noans2"+f] = `('hello world', 2)`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `('hello world', 1)`;
 
 f++;
 window["type"+f] = "4";
@@ -1393,7 +1393,7 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r(\\w+'
+pattern = r'\\w+'
 text = 'hello world'
 
 result = re.subn(pattern, lambda x: x.group()[::-1], text, count=1)
@@ -1401,7 +1401,7 @@ print(result)`;
 window["ans"+f] = `('olleh dlrow', 1)`;
 window["noans1"+f] = `('olleh world', 1)`;
 window["noans2"+f] = `('hello world', 2)`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `None`;
 
 f++;
 window["type"+f] = "4";
@@ -1418,7 +1418,7 @@ print(result.groupdict())`;
 window["ans"+f] = `{'first': 'John', 'last': 'Smith'}`;
 window["noans1"+f] = `{'John': 'first', 'Smith': 'last'}`;
 window["noans2"+f] = `{'first': 'Smith', 'last': 'John'}`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `{'John': 'Smith'}`;
 
 f++;
 window["type"+f] = "4";
@@ -1435,7 +1435,7 @@ print(result)`;
 window["ans"+f] = `Smith, John`;
 window["noans1"+f] = `John, Smith`;
 window["noans2"+f] = `Smith,John`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `Smith`;
 
 f++;
 window["type"+f] = "4";
@@ -1452,7 +1452,7 @@ print(result)`;
 window["ans"+f] = `John Smith`;
 window["noans1"+f] = `Smith, John`;
 window["noans2"+f] = `Smith John`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `John`;
 
 f++;
 window["type"+f] = "4";
@@ -1461,7 +1461,7 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r(\\w+'
+pattern = r'\\w+'
 text = 'hello world'
 
 result = re.findall(pattern, text, flags=re.IGNORECASE)
@@ -1469,7 +1469,7 @@ print(result)`;
 window["ans"+f] = `['hello', 'world']`;
 window["noans1"+f] = `['Hello', 'World']`;
 window["noans2"+f] = `['hello', 'world', 'Hello', 'World']`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `['hello', 'world', 'Hello']`;
 
 f++;
 window["type"+f] = "4";
@@ -1486,7 +1486,7 @@ print(result)`;
 window["ans"+f] = `<re.Match object; span=(0, 4), match='2022'>`;
 window["noans1"+f] = `<re.Match object; span=(0, 3), match='202'>`;
 window["noans2"+f] = `<re.Match object; span=(0, 5), match=' 2022'>`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `TypeError`;
 
 f++;
 window["type"+f] = "4";
@@ -1496,12 +1496,11 @@ window["q"+f] =`
 import re
 
 pattern = r'^\\d{4}$'
-text = '2022
-2023'
+text = '2022 2023'
 
 result = re.findall(pattern, text)
 print(result)`;
-window["ans"+f] = `None of the above`;
+window["ans"+f] = `[]`;
 window["noans1"+f] = `['2022', '2023']`;
 window["noans2"+f] = `['2022']`;
 window["noans3"+f] = `['2023']`;
@@ -1520,7 +1519,8 @@ result = re.findall(pattern, text)
 print(result)`;
 window["ans"+f] = `['2022']`;
 window["noans1"+f] = `<re.Match object; span=(0, 4), match='2022'>`;
-window["noans2"+f] = `None of the above`;
+window["noans2"+f] = `[]`;
+window["noans3"+f] = `ValueError`;
 
 f++;
 window["type"+f] = "4";
@@ -1529,7 +1529,7 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r(\\w+'
+pattern = r'\\w+'
 text = 'hello world'
 
 result = re.finditer(pattern, text)
@@ -1581,7 +1581,7 @@ else:
 window["ans"+f] = `Match not found`;
 window["noans1"+f] = `Match found: 30 Oct 2022`;
 window["noans2"+f] = `Match found: 30-10-2022`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `Match found: 30102022`;
 
 f++;
 window["type"+f] = "4";
@@ -1602,7 +1602,7 @@ else:
 window["ans"+f] = `Match not found`;
 window["noans1"+f] = `Match found: 30 Oct 2022`;
 window["noans2"+f] = `Match found: 30_Oct_2022`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `None`;
 
 f++;
 window["type"+f] = "4";
@@ -1635,8 +1635,8 @@ text = 'Hello World!'
 result = re.findall(pattern, text)
 
 print(result)`;
-window["ans"+f] = `['Hello', 'World']`;
-window["noans1"+f] = `['ello', 'orld']`;
+window["ans"+f] = `['ello', 'orld']`;
+window["noans1"+f] = `['Hello', 'World']`;
 window["noans2"+f] = `['H', 'W']`;
 window["noans3"+f] = `['Hello', 'World', '']`;
 
@@ -1653,7 +1653,7 @@ text = '123abc456def789'
 result = re.split(pattern, text)
 
 print(result)`;
-window["ans"+f] = `['abc', 'def', '']`;
+window["ans"+f] = `['', 'abc', 'def', '']`;
 window["noans1"+f] = `['123', '456', '789']`;
 window["noans2"+f] = `['1', '2', '3', 'abc', '4', '5', '6', 'def', '7', '8', '9']`;
 window["noans3"+f] = `['123abc456def789']`;
@@ -1676,7 +1676,7 @@ else:
     print('Match not found')`;
 window["ans"+f] = `Match not found`;
 window["noans1"+f] = `Match found: hello.world.gmail.com`;
-window["noans2"+f] = `Match not found:`;
+window["noans2"+f] = `Match found: hello.world`;
 window["noans3"+f] = `Match found: None`;
 
 f++;
@@ -1685,13 +1685,13 @@ window["des"+f] = `What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r\\w{4'
+pattern = r'\\w{4}'
 text = 'Python is a powerful programming language.'
 
 result = re.findall(pattern, text)
 
 print(result)`;
-window["ans"+f] = `['Python', 'powerful', 'programming']`;
+window["ans"+f] = `['Pyth', 'powe', 'rful', 'prog', 'ramm', 'lang', 'uage']`;
 window["noans1"+f] = `['Python', 'is', 'powerful', 'programming', 'language']`;
 window["noans2"+f] = `['is', 'a']`;
 window["noans3"+f] = `['is', 'a', 'language']`;
@@ -1703,7 +1703,7 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r\\w{3,'
+pattern = r'\\w{3,}'
 text = 'Python is a powerful programming language.'
 
 result = re.findall(pattern, text)
@@ -1754,7 +1754,7 @@ else:
 window["ans"+f] = `Match not found`;
 window["noans1"+f] = `Match found: 123-456-7890`;
 window["noans2"+f] = `Match found: 1234567890`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `Match found: None`;
 
 f++;
 window["type"+f] = "4";
@@ -1772,10 +1772,10 @@ if result:
     print('Match found:', result.group())
 else:
     print('Match not found')`;
-window["ans"+f] = `Match found: 123-45-6789`;
+window["ans"+f] = `Match not found`;
 window["noans1"+f] = `Match found: 123456789`;
-window["noans2"+f] = `Match not found`;
-window["noans3"+f] = `None of the above`;
+window["noans2"+f] = `Match found: 123-45-6789`;
+window["noans3"+f] = `Match found: is my SSN`;
 
 f++;
 window["type"+f] = "4";
@@ -1790,10 +1790,10 @@ text = 'My SSN is 234-56-7890 and my phone number is 123-456-7890'
 result = re.findall(pattern, text)
 
 print(result)`;
-window["ans"+f] = `['234-56-7890', '123-456-7890']`;
+window["ans"+f] = `[]`;
 window["noans1"+f] = `['234567890', '1234567890']`;
-window["noans2"+f] = `[]`;
-window["noans3"+f] = `None of the above`;
+window["noans2"+f] = `['234-56-7890', '123-456-7890']`;
+window["noans3"+f] = `None`;
 
 f++;
 window["type"+f] = "4";
@@ -1811,7 +1811,7 @@ print(result)`;
 window["ans"+f] = `['234', '56', '7890', '123', '456', '7890']`;
 window["noans1"+f] = `['234-56-7890', '123-456-7890']`;
 window["noans2"+f] = `['SSN', 'and', 'phone', 'number', 'is']`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `['234', '56', '7890', '123']`;
 
 f++;
 window["type"+f] = "4";
@@ -1826,10 +1826,10 @@ text = 'My SSN is 234-56-7890 and my phone number is 123-456-7890'
 result = re.split(pattern, text)
 
 print(result)`;
-window["ans"+f] = `['My SSN is', '234', '56', '7890', 'and', 'my', 'phone', 'number', 'is', '123', '456', '7890']`;
-window["noans1"+f] = `['My SSN is ', '-', '-', ' and my phone number is ', '-', '-', '']`;
+window["ans"+f] = `['My SSN is ', '-', '-', ' and my phone number is ', '-', '-', '']`;
+window["noans1"+f] = `['My SSN is', '234', '56', '7890', 'and', 'my', 'phone', 'number', 'is', '123', '456', '7890']`;
 window["noans2"+f] = `['My SSN is 234-56-7890 and my phone number is 123-456-7890']`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `None`;
 
 f++;
 window["type"+f] = "4";
@@ -1844,10 +1844,10 @@ text = 'My SSN is 234-56-7890 and my phone number is 123-456-7890'
 result = re.sub(pattern, 'X', text)
 
 print(result)`;
-window["ans"+f] = `'My SSN is XXX-XX-XXXX and my phone number is XXX-XXX-XXXX'`;
-window["noans1"+f] = `'My SSN is X-X-X and my phone number is X-X-X'`;
+window["ans"+f] = `'My SSN is X-X-X and my phone number is X-X-X'`;
+window["noans1"+f] = `'My SSN is XXX-XX-XXXX and my phone number is XXX-XXX-XXXX'`;
 window["noans2"+f] = `'My SSN is 234-56-7890 and my phone number is 123-456-7890'`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `None`;
 
 f++;
 window["type"+f] = "4";
@@ -1865,7 +1865,7 @@ print(result)`;
 window["ans"+f] = `'My SSN is X-X-7890 and my phone number is 123-456-7890'`;
 window["noans1"+f] = `'My SSN is XXX-XX-7890 and my phone number is 123-456-7890'`;
 window["noans2"+f] = `'My SSN is XXX-XX-XXXX and my phone number is 123-456-7890'`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `'My SSN is and my phone number is '`;
 
 f++;
 window["type"+f] = "4";
@@ -1874,14 +1874,14 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r\\w{5'
+pattern = r'\\w{5}'
 text = 'The quick brown fox jumps over the lazy dog'
 
 result = re.findall(pattern, text)
 
 print(result)`;
-window["ans"+f] = `['quick', 'brown']`;
-window["noans1"+f] = `['quick', 'brown', 'jumps']`;
+window["ans"+f] = `['quick', 'brown', 'jumps']`;
+window["noans1"+f] = `['quick', 'brown']`;
 window["noans2"+f] = `['quick', 'brown', 'jumps', 'lazy']`;
 window["noans3"+f] = `None of the above`;
 
@@ -1892,16 +1892,16 @@ What is the output of the following code?`;
 window["q"+f] =`
 import re
 
-pattern = r'(\\w)☺'
+pattern = r'(\\w)'
 text = 'bookkeeper'
 
 result = re.findall(pattern, text)
 
 print(result)`;
-window["ans"+f] = `['oo', 'ee']`;
+window["ans"+f] = `['b', 'o', 'o', 'k', 'k', 'e', 'e', 'p', 'e', 'r']`;
 window["noans1"+f] = `['bb', 'kk']`;
 window["noans2"+f] = `['book', 'keeper']`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `['oo', 'ee']`;
 
 f++;
 window["type"+f] = "4";
@@ -1916,10 +1916,10 @@ text = '1000000 10000000 100000000'
 result = re.sub(pattern, ',', text)
 
 print(result)`;
-window["ans"+f] = `'1,000,000 10,000,000 100,000,000'`;
+window["ans"+f] = `'1,0,0,0,000 1,0,0,0,0,000 1,0,0,0,0,0,000'`;
 window["noans1"+f] = `'1,000000 10,000000 100,000000'`;
 window["noans2"+f] = `'1000000, 10000000, 100000000'`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `1,000,000 10,000,000 100,000,000`;
 
 f++;
 window["type"+f] = "4";
@@ -1937,7 +1937,7 @@ print(result.group('year'))`;
 window["ans"+f] = `'2022'`;
 window["noans1"+f] = `'04'`;
 window["noans2"+f] = `'01'`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `None`;
 
 f++;
 window["type"+f] = "4";
@@ -1952,10 +1952,10 @@ text = 'My SSN is 234-56-7890 and my phone number is 123-456-7890'
 result = re.search(pattern, text)
 
 print(result.span())`;
-window["ans"+f] = `(12, 15)`;
+window["ans"+f] = `(10, 13)`;
 window["noans1"+f] = `(11, 13)`;
 window["noans2"+f] = `(23, 25)`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `(12, 15)`;
 
 f++;
 window["type"+f] = "4";
@@ -1973,7 +1973,7 @@ print(result.group())`;
 window["ans"+f] = `'234'`;
 window["noans1"+f] = `'56'`;
 window["noans2"+f] = `'7890'`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `TypeError`;
 
 f++;
 window["type"+f] = "4";
@@ -1991,7 +1991,7 @@ print(result.groupdict())`;
 window["ans"+f] = `{'year': '2022', 'month': '04', 'day': '01'}`;
 window["noans1"+f] = `{'Today': '2022', 'is': '04', '01': None}`;
 window["noans2"+f] = `{'2022': '04', '01': None}`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `{'year': '', 'month': '', 'day': ''}`;
 
 f++;
 window["type"+f] = "4";
@@ -2068,8 +2068,8 @@ b = B(10, 20)
 print(a.x)
 print(b.x)
 print(b.y)`;
-window["ans"+f] = `5, 20, 10`;
-window["noans1"+f] = `5, 10, 20`;
+window["ans"+f] = `5, 10, 20`;
+window["noans1"+f] = `5, 20, 10`;
 window["noans2"+f] = `10, 20, 5`;
 window["noans3"+f] = `SyntaxError`;
 
@@ -2131,8 +2131,8 @@ def outer():
     print(x)
 
 outer()`;
-window["ans"+f] = `1, 2`;
-window["noans1"+f] = `2, 1`;
+window["ans"+f] = `2, 1`;
+window["noans1"+f] = `1, 2`;
 window["noans2"+f] = `2, 2`;
 window["noans3"+f] = `1, 1`;
 
@@ -2151,9 +2151,9 @@ def outer():
     print(x)
 
 outer()`;
-window["ans"+f] = `2, 1`;
+window["ans"+f] = `2, 2`;
 window["noans1"+f] = `1, 2`;
-window["noans2"+f] = `2, 2`;
+window["noans2"+f] = `2, 1`;
 window["noans3"+f] = `1, 1`;
 
 f++;
@@ -2171,9 +2171,9 @@ def outer():
     print(x)
 
 outer()`;
-window["ans"+f] = `2, 1`;
+window["ans"+f] = `2, 2`;
 window["noans1"+f] = `1, 2`;
-window["noans2"+f] = `2, 2`;
+window["noans2"+f] = `2, 1`;
 window["noans3"+f] = `1, 1`;
 
 f++;
@@ -2192,7 +2192,7 @@ def outer():
 
 outer()
 print(x)`;
-window["ans"+f] = `2, 1, 1`;
+window["ans"+f] = `2, 1, 2`;
 window["noans1"+f] = `1, 2, 2`;
 window["noans2"+f] = `2, 2, 2`;
 window["noans3"+f] = `SyntaxError`;
@@ -2242,7 +2242,7 @@ result()`;
 window["ans"+f] = `'Hello, world!'`;
 window["noans1"+f] = `outer`;
 window["noans2"+f] = `inner`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `None`;
 
 f++;
 window["type"+f] = "4";
@@ -2255,7 +2255,7 @@ print(squares)`;
 window["ans"+f] = `<map object at 0x7f97b15c3e50>`;
 window["noans1"+f] = `[1, 4, 9, 16, 25]`;
 window["noans2"+f] = `[2, 4, 6, 8, 10]`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `None`;
 
 f++;
 window["type"+f] = "4";
@@ -2268,7 +2268,7 @@ print(list(squares))`;
 window["ans"+f] = `[1, 4, 9, 16, 25]`;
 window["noans1"+f] = `<map object at 0x7f97b15c3e50>`;
 window["noans2"+f] = `[2, 4, 6, 8, 10]`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `None`;
 
 f++;
 window["type"+f] = "4";
@@ -2281,7 +2281,7 @@ print(squares)`;
 window["ans"+f] = `[1, 4, 9, 16, 25]`;
 window["noans1"+f] = `<map object at 0x7f97b15c3e50>`;
 window["noans2"+f] = `[2, 4, 6, 8, 10]`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `None`;
 
 f++;
 window["type"+f] = "4";
@@ -2294,7 +2294,7 @@ print(squares)`;
 window["ans"+f] = `<generator object <genexpr> at 0x7f97b15c3e50>`;
 window["noans1"+f] = `[1, 4, 9, 16, 25]`;
 window["noans2"+f] = `[2, 4, 6, 8, 10]`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `None`;
 
 f++;
 window["type"+f] = "4";
@@ -2307,7 +2307,7 @@ print(list(squares))`;
 window["ans"+f] = `[1, 4, 9, 16, 25]`;
 window["noans1"+f] = `<generator object <genexpr> at 0x7f97b15c3e50>`;
 window["noans2"+f] = `[2, 4, 6, 8, 10]`;
-window["noans3"+f] = `None of the above`;
+window["noans3"+f] = `None`;
 
 f++;
 window["type"+f] = "4";
@@ -2339,7 +2339,7 @@ window["q"+f] =`
 import re
 
 text = "The quick brown fox jumps over the lazy dog"
-pattern = r\\w{5"
+pattern = r"\\w{5}"
 matches = re.findall(pattern, text)
 print(matches)`;
 window["ans"+f] = `["quick", "brown", "jumps"]`;
@@ -2355,29 +2355,13 @@ window["q"+f] =`
 import re
 
 text = "The quick brown fox jumps over the lazy dog"
-pattern = r\\w{4"
+pattern = r"\\w{4}"
 matches = re.findall(pattern, text)
 print(matches)`;
-window["ans"+f] = `["quick", "brown", "fox", "jumps", "lazy"]`;
+window["ans"+f] = `["quic", "brow", "jump", "over", "lazy"]`;
 window["noans1"+f] = `["quick", "brown", "jumps", "over", "lazy"]`;
 window["noans2"+f] = `["quick", "brown", "fox", "jumps", "over", "lazy", "dog"]`;
 window["noans3"+f] = `["quick", "brown", "jumps", "lazy"]`;
-
-f++;
-window["type"+f] = "4";
-window["des"+f] = `
-What is the output of the following code?`;
-window["q"+f] =`
-import re
-
-text = "The quick brown fox jumps over the lazy dog"
-pattern = r[a-z]"
-matches = re.findall(pattern, text)
-print(matches)`;
-window["ans"+f] = `["quick", "brown", "fox", "jumps", "over", "lazy", "dog"]`;
-window["noans1"+f] = `["The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"]`;
-window["noans2"+f] = `["The", "quick", "brown", "fox", "jumps", "over", "lazy", "dog"]`;
-window["noans3"+f] = `["The", "brown", "fox", "jumps", "over", "lazy", "dog"]`;
 
 f++;
 window["type"+f] = "4";
