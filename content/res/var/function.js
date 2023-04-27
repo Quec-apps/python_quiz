@@ -124,17 +124,6 @@ window["noans3"+c] = `20`;
 c++;
 window["type"+c] = "4";
 window["des"+c] = `
-Which of the following is a valid way to call a function in Python?
-`;
-window["q"+c] =``;
-window["ans"+c] = `my_function()`;
-window["noans1"+c] = `call my_function()`;
-window["noans2"+c] = `my_function.call()`;
-window["noans3"+c] = `my_function.call`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
 What is the output of the following code snippet?
 `;
 window["q"+c] =`
@@ -172,18 +161,18 @@ print_twice("Hello")`;
 window["ans"+c] = `Hello Hello`;
 window["noans1"+c] = `Hello`;
 window["noans2"+c] = `"HelloHello"`;
-window["noans3"+c] = `"Hello`;
+window["noans3"+c] = `"(Hello),(Hello)`;
 
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is a valid way to define a recursive function in Python?
-`;
-window["q"+c] =``;
-window["ans"+c] = `def my_function(n):`;
-window["noans1"+c] = `def my_function(n, recursion=True):`;
-window["noans2"+c] = `def my_function(n): recursion=True`;
-window["noans3"+c] = `def my_function(n, recursion=False):`;
+// c++;
+// window["type"+c] = "4";
+// window["des"+c] = `
+// Which of the following is a valid way to define a recursive function in Python?
+// `;
+// window["q"+c] =``;
+// window["ans"+c] = `def my_function(n):`;
+// window["noans1"+c] = `def my_function(n, recursion=True):`;
+// window["noans2"+c] = `def my_function(n): recursion=True`;
+// window["noans3"+c] = `def my_function(n, recursion=False):`;
 
 c++;
 window["type"+c] = "4";
@@ -198,9 +187,9 @@ def print_even_numbers(n):
         print_even_numbers(n-1)
 
 print_even_numbers(6)`;
-window["ans"+c] = `2 4 6`;
+window["ans"+c] = `6 4 2 0`;
 window["noans1"+c] = `0 2 4 6`;
-window["noans2"+c] = `6 4 2 0`;
+window["noans2"+c] = `2 4 6`;
 window["noans3"+c] = `6 4 2`;
 
 c++;
@@ -233,17 +222,6 @@ window["noans3"+c] = `The result is 12`;
 c++;
 window["type"+c] = "4";
 window["des"+c] = `
-Which of the following is a valid way to define an anonymous function in Python?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda a, b: a + b`;
-window["noans1"+c] = `lambda add_numbers(a, b): return a + b`;
-window["noans2"+c] = `def (a, b) -> a + b`;
-window["noans3"+c] = `def add_numbers(a, b): return a + b`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
 What is the output of the following code snippet?
 `;
 window["q"+c] =`
@@ -264,8 +242,8 @@ window["des"+c] = `
 Which of the following is a valid way to define a global variable in Python?
 `;
 window["q"+c] =``;
-window["ans"+c] = `my_var = 42`;
-window["noans1"+c] = `global my_var = 42`;
+window["ans"+c] = `global my_var`;
+window["noans1"+c] = `my_var = 42`;
 window["noans2"+c] = `def my_var(): return 42`;
 window["noans3"+c] = `my_var == 42`;
 
@@ -293,10 +271,10 @@ def power_of_two(n):
         return 2 * power_of_two(n-1)
 
 print(power_of_two(4))`;
-window["ans"+c] = `8`;
+window["ans"+c] = `16`;
 window["noans1"+c] = `2`;
 window["noans2"+c] = `4`;
-window["noans3"+c] = `16`;
+window["noans3"+c] = `8`;
 
 c++;
 window["type"+c] = "4";
@@ -352,21 +330,21 @@ def print_odd_numbers(n):
         print_odd_numbers(n-1)
 
 print_odd_numbers(7)`;
-window["ans"+c] = `1 3 5 7`;
+window["ans"+c] = `7 5 3 1`;
 window["noans1"+c] = `0 2 4 6 7`;
-window["noans2"+c] = `7 5 3 1`;
+window["noans2"+c] = `1 3 5 7`;
 window["noans3"+c] = `7 5 3 1 0`;
 
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is a valid way to define an anonymous function that returns the square of a number?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: x*x`;
-window["noans1"+c] = `lambda x: x^2`;
-window["noans2"+c] = `def(x): return x*x`;
-window["noans3"+c] = `def(x): x^2`;
+// c++;
+// window["type"+c] = "4";
+// window["des"+c] = `
+// Which of the following is a valid way to define an anonymous function that returns the square of a number?
+// `;
+// window["q"+c] =``;
+// window["ans"+c] = `lambda x: x*x`;
+// window["noans1"+c] = `lambda x: x^2`;
+// window["noans2"+c] = `def(x): return x*x`;
+// window["noans3"+c] = `def(x): x^2`;
 
 c++;
 window["type"+c] = "4";
@@ -390,17 +368,6 @@ window["noans3"+c] = `20`;
 c++;
 window["type"+c] = "4";
 window["des"+c] = `
-Which of the following is a valid way to define a function that takes a variable number of arguments in Python?
-`;
-window["q"+c] =``;
-window["ans"+c] = `def my_function(*args):`;
-window["noans1"+c] = `def my_function(...args):`;
-window["noans2"+c] = `def my_function(**kwargs):`;
-window["noans3"+c] = `def my_function(*kwargs):`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
 What is the output of the following code snippet?
 `;
 window["q"+c] =`
@@ -411,10 +378,10 @@ def factorial(n):
         return n * factorial(n-1)
 
 print(factorial(4))`;
-window["ans"+c] = `120`;
+window["ans"+c] = `24`;
 window["noans1"+c] = `4`;
 window["noans2"+c] = `12`;
-window["noans3"+c] = `24`;
+window["noans3"+c] = `120`;
 
 c++;
 window["type"+c] = "4";
@@ -422,8 +389,8 @@ window["des"+c] = `
 Which of the following is a valid way to define a lambda function that takes no arguments and returns the string "Hello, world!"?
 `;
 window["q"+c] =``;
-window["ans"+c] = `lambda(): "Hello, world!"`;
-window["noans1"+c] = `lambda: "Hello, world!"`;
+window["ans"+c] = `lambda: "Hello, world!"`;
+window["noans1"+c] = `lambda(): "Hello, world!"`;
 window["noans2"+c] = `lambda x: "Hello, world!"`;
 window["noans3"+c] = `lambda x(): "Hello, world!"`;
 
@@ -441,21 +408,10 @@ def my_function():
 
 my_function()
 print(x)`;
-window["ans"+c] = `NameError: name 'x' is not defined`;
+window["ans"+c] = `UnboundLocalError`;
 window["noans1"+c] = `6 6`;
 window["noans2"+c] = `6 5`;
 window["noans3"+c] = `5 6`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is a valid way to define a function with multiple keyword arguments in Python?
-`;
-window["q"+c] =``;
-window["ans"+c] = `def my_function(*args, **kwargs):`;
-window["noans1"+c] = `def my_function(**kwargs, *args):`;
-window["noans2"+c] = `def my_function(*kwargs, **args):`;
-window["noans3"+c] = `def my_function(**args, *kwargs):`;
 
 c++;
 window["type"+c] = "4";
@@ -475,17 +431,6 @@ window["ans"+c] = `3 2 1 Blastoff!`;
 window["noans1"+c] = `0 1 2 Blastoff!`;
 window["noans2"+c] = `1 2 3 Blastoff!`;
 window["noans3"+c] = `3 2 1 0 Blastoff!`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is a valid way to define an anonymous function that takes two arguments and returns their product?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x y: x * y`;
-window["noans1"+c] = `lambda x, y: return x * y`;
-window["noans2"+c] = `lambda x, y: x + y`;
-window["noans3"+c] = `lambda x y: return x * y`;
 
 c++;
 window["type"+c] = "4";
@@ -510,17 +455,6 @@ window["noans3"+c] = `6 5`;
 c++;
 window["type"+c] = "4";
 window["des"+c] = `
-Which of the following is a valid way to define a function with a variable number of keyword arguments in Python?
-`;
-window["q"+c] =``;
-window["ans"+c] = `def my_function(**kwargs, *args):`;
-window["noans1"+c] = `def my_function(*args, **kwargs):`;
-window["noans2"+c] = `def my_function(**args, *kwargs):`;
-window["noans3"+c] = `def my_function(*kwargs, **args):`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
 What is the output of the following code snippet?
 `;
 window["q"+c] =`
@@ -538,17 +472,6 @@ window["noans3"+c] = `1 2 3`;
 c++;
 window["type"+c] = "4";
 window["des"+c] = `
-Which of the following is a valid way to define a recursive function in Python?
-`;
-window["q"+c] =``;
-window["ans"+c] = `def my_function(n):`;
-window["noans1"+c] = `def my_function():`;
-window["noans2"+c] = `def my_function(n=0):`;
-window["noans3"+c] = `def my_function(*args):`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
 What is the output of the following code snippet?
 `;
 window["q"+c] =`
@@ -561,17 +484,6 @@ window["ans"+c] = `6 11`;
 window["noans1"+c] = `6 10`;
 window["noans2"+c] = `5 11`;
 window["noans3"+c] = `5 10`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is a valid way to define an anonymous function that takes a single argument and returns the square of that argument?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: x**2`;
-window["noans1"+c] = `lambda x: x^2`;
-window["noans2"+c] = `lambda x: x*x`;
-window["noans3"+c] = `lambda x: pow(x,2)`;
 
 c++;
 window["type"+c] = "4";
@@ -595,17 +507,6 @@ window["noans3"+c] = `5 5`;
 c++;
 window["type"+c] = "4";
 window["des"+c] = `
-Which of the following is a valid way to define a function with default arguments in Python?
-`;
-window["q"+c] =``;
-window["ans"+c] = `def my_function(x, y=5):`;
-window["noans1"+c] = `def my_function(x=5, y):`;
-window["noans2"+c] = `def my_function(x=5, y=5):`;
-window["noans3"+c] = `def my_function(x, y):`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
 What is the output of the following code snippet?
 `;
 window["q"+c] =`
@@ -616,21 +517,10 @@ def my_function(x):
         return x * my_function(x-1)
 
 print(my_function(4))`;
-window["ans"+c] = `120`;
+window["ans"+c] = `24`;
 window["noans1"+c] = `4`;
 window["noans2"+c] = `12`;
-window["noans3"+c] = `24`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is a valid way to define an anonymous function that takes two arguments and returns the sum of their squares?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x, y: x**2 + y**2`;
-window["noans1"+c] = `lambda x, y: x^2 + y^2`;
-window["noans2"+c] = `lambda x, y: x*x + y*y`;
-window["noans3"+c] = `lambda x, y: pow(x,2) + pow(y,2)`;
+window["noans3"+c] = `120`;
 
 c++;
 window["type"+c] = "4";
@@ -665,18 +555,7 @@ print(my_function(**my_dict))`;
 window["ans"+c] = `3`;
 window["noans1"+c] = `{'x': 1, 'y': 2}`;
 window["noans2"+c] = `1 2`;
-window["noans3"+c] = `TypeError: my_function() takes 2 positional arguments but 0 were given`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is a valid way to define an anonymous function that takes two arguments and returns the product of their squares?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x, y: x**2 * y**2`;
-window["noans1"+c] = `lambda x, y: x^2 * y^2`;
-window["noans2"+c] = `lambda x, y: x*x * y*y`;
-window["noans3"+c] = `lambda x, y: pow(x,2) * pow(y,2)`;
+window["noans3"+c] = `TypeError`;
 
 c++;
 window["type"+c] = "4";
@@ -701,17 +580,6 @@ window["noans3"+c] = `5 5`;
 c++;
 window["type"+c] = "4";
 window["des"+c] = `
-Which of the following is a valid way to define a function that takes a variable number of arguments?
-`;
-window["q"+c] =``;
-window["ans"+c] = `def my_function(*args, **kwargs):`;
-window["noans1"+c] = `def my_function(args):`;
-window["noans2"+c] = `def my_function(args=[]):`;
-window["noans3"+c] = `def my_function(**kwargs):`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
 What is the output of the following code snippet?
 `;
 window["q"+c] =`
@@ -720,21 +588,10 @@ def my_function(x, y=5):
 
 print(my_function(2))
 print(my_function(2, 2))`;
-window["ans"+c] = `7 5`;
-window["noans1"+c] = `7 4`;
+window["ans"+c] = `7 4`;
+window["noans1"+c] = `7 5`;
 window["noans2"+c] = `2 7`;
 window["noans3"+c] = `2 4`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is a valid way to define an anonymous function that takes a single argument and returns that argument multiplied by 2?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: x * 2`;
-window["noans1"+c] = `lambda x: x + x`;
-window["noans2"+c] = `lambda x: 2x`;
-window["noans3"+c] = `lambda x: x**2`;
 
 c++;
 window["type"+c] = "4";
@@ -749,7 +606,7 @@ print(x)`;
 window["ans"+c] = `NameError: name 'x' is not defined`;
 window["noans1"+c] = `10`;
 window["noans2"+c] = `None`;
-window["noans3"+c] = `TypeError: my_function() takes 0 positional arguments but 1 was given`;
+window["noans3"+c] = `TypeError`;
 
 c++;
 window["type"+c] = "4";
@@ -806,7 +663,7 @@ print(my_function(**my_dict))`;
 window["ans"+c] = `6`;
 window["noans1"+c] = `{'x': 2, 'y': 3}`;
 window["noans2"+c] = `2 3`;
-window["noans3"+c] = `TypeError: my_function() takes 2 positional arguments but 0 were given`;
+window["noans3"+c] = `TypeError`;
 
 c++;
 window["type"+c] = "4";
@@ -823,18 +680,7 @@ print(my_function())`;
 window["ans"+c] = `None`;
 window["noans1"+c] = `10`;
 window["noans2"+c] = `5`;
-window["noans3"+c] = `TypeError: my_function() takes 0 positional arguments but 1 was given`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is a valid way to define an anonymous function that takes two arguments and returns the sum of their squares?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x, y: pow(x,2) + pow(y,2)`;
-window["noans1"+c] = `lambda x, y: x+y`;
-window["noans2"+c] = `lambda x, y: x*x + y*y`;
-window["noans3"+c] = `lambda x, y: x**2 - y**2`;
+window["noans3"+c] = `TypeError`;
 
 c++;
 window["type"+c] = "4";
@@ -849,9 +695,9 @@ print(my_function(1, 2, 3))
 print(my_function(a=1, b=2, c=3))
 print(my_function(c=3, b=2, a=1))`;
 window["ans"+c] = `6 6 6`;
-window["noans1"+c] = `6 6 6`;
-window["noans2"+c] = `6 TypeError: my_function() takes 3 positional arguments but 0-3 were given`;
-window["noans3"+c] = `6 6 TypeError: my_function() got multiple values for argument 'a'`;
+window["noans1"+c] = `6 6`;
+window["noans2"+c] = `6 TypeError`;
+window["noans3"+c] = `6 6 TypeError`;
 
 c++;
 window["type"+c] = "4";
@@ -870,18 +716,7 @@ print(x)`;
 window["ans"+c] = `5`;
 window["noans1"+c] = `10`;
 window["noans2"+c] = `None`;
-window["noans3"+c] = `TypeError: my_function() takes 0 positional arguments but 1 was given`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is a valid way to define an anonymous function that takes two arguments and returns the sum of their cubes?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x, y: pow(x, 3) + pow(y, 3)`;
-window["noans1"+c] = `lambda x, y: pow(x+y, 3)`;
-window["noans2"+c] = `lambda x, y: x**3 - y**3`;
-window["noans3"+c] = `lambda x, y: pow(x,3) + pow(y,3)`;
+window["noans3"+c] = `TypeError`;
 
 c++;
 window["type"+c] = "4";
@@ -897,7 +732,7 @@ print(my_function(4, 5, 6, 7))`;
 window["ans"+c] = `6 22`;
 window["noans1"+c] = `123 4567`;
 window["noans2"+c] = `6 22 123 4567`;
-window["noans3"+c] = `TypeError: my_function() takes 0 positional arguments but 1-4 were given`;
+window["noans3"+c] = `TypeError`;
 
 c++;
 window["type"+c] = "4";
@@ -911,21 +746,10 @@ def my_function(a, b, c=0, d=0):
 print(my_function(1, 2))
 print(my_function(1, 2, 3))
 print(my_function(1, 2, 3, 4))`;
-window["ans"+c] = `3 6 7`;
-window["noans1"+c] = `3 6 10`;
+window["ans"+c] = `3 6 10`;
+window["noans1"+c] = `3 6 7`;
 window["noans2"+c] = `1 2 3`;
-window["noans3"+c] = `TypeError: my_function() missing 1 required positional argument: 'b'`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is a valid way to define an anonymous function that takes a single argument and returns the square of that argument?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: x**2`;
-window["noans1"+c] = `lambda x: pow(x, 2)`;
-window["noans2"+c] = `lambda x: x*x`;
-window["noans3"+c] = `lambda x: x**3`;
+window["noans3"+c] = `TypeError`;
 
 c++;
 window["type"+c] = "4";
@@ -938,10 +762,10 @@ def my_function(a, b, c):
 
 my_list = [1, 2, 3]
 my_function(*my_list)`;
-window["ans"+c] = `1 2 None`;
-window["noans1"+c] = `1 2 3`;
+window["ans"+c] = `1 2 3`;
+window["noans1"+c] = `1 2 None`;
 window["noans2"+c] = `1 [2, 3] None`;
-window["noans3"+c] = `TypeError: my_function() missing 2 required positional arguments: 'b' and 'c'`;
+window["noans3"+c] = `TypeError`;
 
 c++;
 window["type"+c] = "4";
@@ -956,18 +780,7 @@ my_function(1, 2, 3, 4, 5)`;
 window["ans"+c] = `1 2 (3, 4, 5)`;
 window["noans1"+c] = `1 2 [3, 4, 5]`;
 window["noans2"+c] = `1 2 3 4 5`;
-window["noans3"+c] = `TypeError: my_function() missing 1 required positional argument: 'b'`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is a valid way to define an anonymous function that takes a single argument and returns True if the argument is positive and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: x >= 0`;
-window["noans1"+c] = `lambda x: x > 0`;
-window["noans2"+c] = `lambda x: x < 0`;
-window["noans3"+c] = `lambda x: x <= 0`;
+window["noans3"+c] = `TypeError`;
 
 c++;
 window["type"+c] = "4";
@@ -982,7 +795,7 @@ print(my_function(b=2, a=1, c=3))`;
 window["ans"+c] = `6`;
 window["noans1"+c] = `3`;
 window["noans2"+c] = `1 2 3`;
-window["noans3"+c] = `TypeError: my_function() got multiple values for argument 'a'`;
+window["noans3"+c] = `TypeError`;
 
 c++;
 window["type"+c] = "4";
@@ -999,16 +812,6 @@ window["ans"+c] = `NameError: name 'x' is not defined`;
 window["noans1"+c] = `10`;
 window["noans2"+c] = `None`;
 window["noans3"+c] = `undefined`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `Which of the following is the correct way to define a lambda function that takes two arguments, a and b, and returns their sum?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda a, b: a + b`;
-window["noans1"+c] = `lambda a, b: return a + b`;
-window["noans2"+c] = `lambda a, b: sum(a, b)`;
-window["noans3"+c] = `lambda a + b: a, b`;
 
 c++;
 window["type"+c] = "4";
@@ -1039,21 +842,10 @@ def my_function(a, b=2, c=3):
     print(a, b, c)
 
 my_function(1, c=5)`;
-window["ans"+c] = `1 5 3`;
+window["ans"+c] = `1 2 5`;
 window["noans1"+c] = `1 2 3`;
-window["noans2"+c] = `1 2 5`;
-window["noans3"+c] = `TypeError: my_function() missing 1 required positional argument: 'a'`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is a valid way to define a lambda function that takes a single argument and returns the square of that argument?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: x ** 2`;
-window["noans1"+c] = `lambda x: x ^ 2`;
-window["noans2"+c] = `lambda x: x * x`;
-window["noans3"+c] = `lambda x: x + x`;
+window["noans2"+c] = `1 5 3`;
+window["noans3"+c] = `TypeError`;
 
 c++;
 window["type"+c] = "4";
@@ -1093,16 +885,16 @@ window["noans1"+c] = `10 20`;
 window["noans2"+c] = `20 20`;
 window["noans3"+c] = `10 10`;
 
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is greater than 10 and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: x > 10`;
-window["noans1"+c] = `lambda x: if x > 10: True else: False`;
-window["noans2"+c] = `lambda x: x > 10 ? True : False`;
-window["noans3"+c] = `lambda x: x > 10 and True or False`;
+// c++;
+// window["type"+c] = "4";
+// window["des"+c] = `
+// Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is greater than 10 and False otherwise?
+// `;
+// window["q"+c] =``;
+// window["ans"+c] = `lambda x: x > 10`;
+// window["noans1"+c] = `lambda x: if x > 10: True else: False`;
+// window["noans2"+c] = `lambda x: x > 10 ? True : False`;
+// window["noans3"+c] = `lambda x: x > 10 and True or False`;
 
 c++;
 window["type"+c] = "4";
@@ -1118,17 +910,6 @@ window["ans"+c] = `1 4 5`;
 window["noans1"+c] = `1 2 3`;
 window["noans2"+c] = `1 3 5`;
 window["noans3"+c] = `TypeError: my_function() got multiple values for argument 'b'`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is a valid way to define a lambda function that takes a single argument, x, and returns True if x is an even number and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: x % 2 == 0`;
-window["noans1"+c] = `lambda x: if x % 2 == 0: True else: False`;
-window["noans2"+c] = `lambda x: x % 2 == 0 ? True : False`;
-window["noans3"+c] = `lambda x: x % 2 == 0 and True or False`;
 
 c++;
 window["type"+c] = "4";
@@ -1172,17 +953,6 @@ window["noans3"+c] = `10 10`;
 c++;
 window["type"+c] = "4";
 window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns their sum?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x, y: x + y`;
-window["noans1"+c] = `lambda x, y: sum(x, y)`;
-window["noans2"+c] = `lambda x y: x + y`;
-window["noans3"+c] = `lambda x y: sum(x, y)`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
 What is the output of the following code snippet?
 `;
 window["q"+c] =`
@@ -1196,16 +966,16 @@ window["noans1"+c] = `1 3 2`;
 window["noans2"+c] = `2 3 1`;
 window["noans3"+c] = `TypeError: my_function() got an unexpected keyword argument 'a'`;
 
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns its square if x is positive and 0 otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: x**2 if x > 0 else 0`;
-window["noans1"+c] = `lambda x: x^2 if x > 0 else 0`;
-window["noans2"+c] = `lambda x: x*x if x > 0 else 0`;
-window["noans3"+c] = `lambda x: x*x if x > 0, 0`;
+// c++;
+// window["type"+c] = "4";
+// window["des"+c] = `
+// Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns its square if x is positive and 0 otherwise?
+// `;
+// window["q"+c] =``;
+// window["ans"+c] = `lambda x: x**2 if x > 0 else 0`;
+// window["noans1"+c] = `lambda x: x^2 if x > 0 else 0`;
+// window["noans2"+c] = `lambda x: x*x if x > 0 else 0`;
+// window["noans3"+c] = `lambda x: x*x if x > 0, 0`;
 
 c++;
 window["type"+c] = "4";
@@ -1224,16 +994,16 @@ window["noans1"+c] = `[1, 2, 3]`;
 window["noans2"+c] = `[1, 5, 3]`;
 window["noans3"+c] = `[1, 2, 5]`;
 
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is divisible by 3 and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: x % 3 == 0`;
-window["noans1"+c] = `lambda x: if x % 3 == 0: True else: False`;
-window["noans2"+c] = `lambda x: x % 3 == 0 and True or False`;
-window["noans3"+c] = `lambda x: x % 3`;
+// c++;
+// window["type"+c] = "4";
+// window["des"+c] = `
+// Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is divisible by 3 and False otherwise?
+// `;
+// window["q"+c] =``;
+// window["ans"+c] = `lambda x: x % 3 == 0`;
+// window["noans1"+c] = `lambda x: if x % 3 == 0: True else: False`;
+// window["noans2"+c] = `lambda x: x % 3 == 0 and True or False`;
+// window["noans3"+c] = `lambda x: x % 3`;
 
 c++;
 window["type"+c] = "4";
@@ -1250,16 +1020,16 @@ window["noans1"+c] = `1 2 5`;
 window["noans2"+c] = `1 2 3`;
 window["noans3"+c] = `1 5 2`;
 
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns the larger of the two?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x, y: x if x > y else y`;
-window["noans1"+c] = `lambda x, y: max(x, y)`;
-window["noans2"+c] = `lambda x, y: x > y ? x : y`;
-window["noans3"+c] = `lambda x, y: y if x > y else x`;
+// c++;
+// window["type"+c] = "4";
+// window["des"+c] = `
+// Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns the larger of the two?
+// `;
+// window["q"+c] =``;
+// window["ans"+c] = `lambda x, y: x if x > y else y`;
+// window["noans1"+c] = `lambda x, y: max(x, y)`;
+// window["noans2"+c] = `lambda x, y: x > y ? x : y`;
+// window["noans3"+c] = `lambda x, y: y if x > y else x`;
 
 c++;
 window["type"+c] = "4";
@@ -1271,21 +1041,10 @@ def my_function(a, b=2, c=3):
     print(a, b, c)
 
 my_function(1, c=4)`;
-window["ans"+c] = `1 4 3`;
-window["noans1"+c] = `1 2 4`;
+window["ans"+c] = `1 2 4`;
+window["noans1"+c] = `1 4 3`;
 window["noans2"+c] = `1 2 3`;
 window["noans3"+c] = `SyntaxError: positional argument follows keyword argument`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is greater than or equal to 0 and False otherwise?  
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: x >= 0`;
-window["noans1"+c] = `lambda x: x => 0`;
-window["noans2"+c] = `lambda x: x >= True else False`;
-window["noans3"+c] = `lambda x: x >= 0 and True or False`;
 
 c++;
 window["type"+c] = "4";
@@ -1306,17 +1065,6 @@ window["noans3"+c] = `(3, 2)`;
 c++;
 window["type"+c] = "4";
 window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns the product of x and y if x is even and 0 otherwise?        
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x, y: x*y if x%2==0 else 0`;
-window["noans1"+c] = `lambda x, y: x*y if x%2=0 else 0`;
-window["noans2"+c] = `lambda x, y: x*y if x%2==0, 0`;
-window["noans3"+c] = `lambda x, y: x%2==0 and x*y or 0`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
 What is the output of the following code snippet?
 `;
 window["q"+c] =`
@@ -1332,16 +1080,16 @@ window["noans1"+c] = `3`;
 window["noans2"+c] = `0`;
 window["noans3"+c] = `NameError: name 'x' is not defined`;
 
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is a string and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: isinstance(x, str)`;
-window["noans1"+c] = `lambda x: type(x) == 'str'`;
-window["noans2"+c] = `lambda x: x is str`;
-window["noans3"+c] = `lambda x: x.__class__ == str`;
+// c++;
+// window["type"+c] = "4";
+// window["des"+c] = `
+// Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is a string and False otherwise?
+// `;
+// window["q"+c] =``;
+// window["ans"+c] = `lambda x: isinstance(x, str)`;
+// window["noans1"+c] = `lambda x: type(x) == 'str'`;
+// window["noans2"+c] = `lambda x: x is str`;
+// window["noans3"+c] = `lambda x: x.__class__ == str`;
 
 c++;
 window["type"+c] = "4";
@@ -1372,21 +1120,10 @@ def my_function(a, b=2, c=3):
     print(a, b, c)
 
 my_function(1, 4)`;
-window["ans"+c] = `1 2 4`;
-window["noans1"+c] = `1 4 3`;
+window["ans"+c] = `1 4 3`;
+window["noans1"+c] = `1 2 4`;
 window["noans2"+c] = `1 2 3`;
 window["noans3"+c] = `SyntaxError: positional argument follows keyword argument`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is a positive number and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: x > 0`;
-window["noans1"+c] = `lambda x: x >= 0`;
-window["noans2"+c] = `lambda x: x == 0`;
-window["noans3"+c] = `lambda x: x < 0`;
 
 c++;
 window["type"+c] = "4";
@@ -1428,7 +1165,7 @@ def my_function():
 
 my_function()
 print(x)`;
-window["ans"+c] = `UnboundLocalError: local variable 'x' referenced before assignment`;
+window["ans"+c] = `UnboundLocalError`;
 window["noans1"+c] = `3`;
 window["noans2"+c] = `5`;
 window["noans3"+c] = `0`;
@@ -1472,21 +1209,10 @@ def my_function(a, b=2, c=3):
     print(a, b, c)
 
 my_function(1, c=4)`;
-window["ans"+c] = `1 4 2`;
-window["noans1"+c] = `1 2 4`;
+window["ans"+c] = `1 2 4`;
+window["noans1"+c] = `1 4 2`;
 window["noans2"+c] = `1 2 3`;
 window["noans3"+c] = `TypeError: my_function() got multiple values for argument 'c'`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is a multiple of 3 and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: x%3 == 0`;
-window["noans1"+c] = `lambda x: x%2 == 0`;
-window["noans2"+c] = `lambda x: x%3 == 1`;
-window["noans3"+c] = `lambda x: x%2 == 1`;
 
 c++;
 window["type"+c] = "4";
@@ -1507,17 +1233,6 @@ window["noans3"+c] = `TypeError: 'int' object is not subscriptable`;
 c++;
 window["type"+c] = "4";
 window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns True if x is greater than y and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x, y: x > y`;
-window["noans1"+c] = `lambda x, y: x < y`;
-window["noans2"+c] = `lambda x, y: x == y`;
-window["noans3"+c] = `lambda x, y: x >= y`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
 What is the output of the following code snippet?
 `;
 window["q"+c] =`
@@ -1525,32 +1240,10 @@ def my_function(a, b=2, c=3):
     print(a, b, c)
 
 my_function(b=4, a=1)`;
-window["ans"+c] = `1 4 2`;
+window["ans"+c] = `1 4 3`;
 window["noans1"+c] = `1 2 4`;
 window["noans2"+c] = `1 2 3`;
 window["noans3"+c] = `TypeError: my_function() got multiple values for argument 'a'`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is a negative number and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: x < 0`;
-window["noans1"+c] = `lambda x: x >= 0`;
-window["noans2"+c] = `lambda x: x == 0`;
-window["noans3"+c] = `lambda x: x > 0`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns the sum of their squares?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x, y: x ** 2 + y ** 2`;
-window["noans1"+c] = `lambda x, y: x ** 2 * y ** 2`;
-window["noans2"+c] = `lambda x, y: (x + y) ** 2`;
-window["noans3"+c] = `lambda x, y: x ** 2 + y`;
 
 c++;
 window["type"+c] = "4";
@@ -1566,7 +1259,7 @@ window["ans"+c] = `1 2 4`;
 window["noans1"+c] = `1 2 3`;
 window["noans2"+c] = `1 3 4`;
 window["noans3"+c] = `4 2 3`;
-
+//check below for verification
 c++;
 window["type"+c] = "4";
 window["des"+c] = `
@@ -1577,17 +1270,6 @@ window["ans"+c] = `lambda x: abs(x)`;
 window["noans1"+c] = `lambda x: x ** 2`;
 window["noans2"+c] = `lambda x: -x`;
 window["noans3"+c] = `lambda x: x`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns the product of x and y?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x, y: x * y`;
-window["noans1"+c] = `lambda x, y: x + y`;
-window["noans2"+c] = `lambda x, y: x / y`;
-window["noans3"+c] = `lambda x, y: x - y`;
 
 c++;
 window["type"+c] = "4";
@@ -1607,16 +1289,16 @@ window["noans1"+c] = `2`;
 window["noans2"+c] = `None`;
 window["noans3"+c] = `SyntaxError`;
 
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns the square root of x?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: math.sqrt(x)`;
-window["noans1"+c] = `lambda x: x ** 2`;
-window["noans2"+c] = `lambda x: -x`;
-window["noans3"+c] = `lambda x: x`;
+// c++;
+// window["type"+c] = "4";
+// window["des"+c] = `
+// Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns the square root of x?
+// `;
+// window["q"+c] =``;
+// window["ans"+c] = `lambda x: math.sqrt(x)`;
+// window["noans1"+c] = `lambda x: x ** 2`;
+// window["noans2"+c] = `lambda x: -x`;
+// window["noans3"+c] = `lambda x: x`;
 
 c++;
 window["type"+c] = "4";
@@ -1669,28 +1351,6 @@ window["noans3"+c] = `1 1`;
 c++;
 window["type"+c] = "4";
 window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns the square of the sum of the digits of x?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: sum(int(digit) for digit in str(x)) ** 2`;
-window["noans1"+c] = `lambda x: sum(int(digit) ** 2 for digit in str(x))`;
-window["noans2"+c] = `lambda x: sum(int(digit) for digit in str(x)) * 2`;
-window["noans3"+c] = `lambda x: sum(int(digit) for digit in str(x)) / 2`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is an even number, and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: x % 2 == 0`;
-window["noans1"+c] = `lambda x: x % 2 == 1`;
-window["noans2"+c] = `lambda x: x % 2`;
-window["noans3"+c] = `lambda x: x % 2 != 0`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
 What is the output of the following code snippet?
 `;
 window["q"+c] =`
@@ -1710,17 +1370,6 @@ window["noans3"+c] = `2 2`;
 c++;
 window["type"+c] = "4";
 window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is a positive number, and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: x > 0`;
-window["noans1"+c] = `lambda x: x >= 0`;
-window["noans2"+c] = `lambda x: x < 0`;
-window["noans3"+c] = `lambda x: x <= 0`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
 What is the output of the following code snippet?
 `;
 window["q"+c] =`
@@ -1735,17 +1384,6 @@ window["ans"+c] = `1 2`;
 window["noans1"+c] = `2 1`;
 window["noans2"+c] = `1 1`;
 window["noans3"+c] = `2 2`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns the sum of the squares of x and y?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x, y: x ** 2 + y ** 2`;
-window["noans1"+c] = `lambda x, y: x ** 2 - y ** 2`;
-window["noans2"+c] = `lambda x, y: x ** 2 * y ** 2`;
-window["noans3"+c] = `lambda x, y: x ** 2 / y ** 2`;
 
 c++;
 window["type"+c] = "4";
@@ -1774,20 +1412,9 @@ Which of the following is the correct way to define a lambda function that takes
 `;
 window["q"+c] =``;
 window["ans"+c] = `lambda x: len(x) if isinstance(x, str) else None`;
-window["noans1"+c] = `lambda x: len(x) if type(x) == str else None`;
-window["noans2"+c] = `lambda x: len(x) if x.__class__ == str else None`;
-window["noans3"+c] = `lambda x: len(x) if x.__class__.__name__ == 'str' else None`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is a string that contains only lowercase letters, and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: x.islower() and x.isalpha()`;
-window["noans1"+c] = `lambda x: x.isalpha() and x.islower()`;
-window["noans2"+c] = `lambda x: x.islower()`;
-window["noans3"+c] = `lambda x: x.isalpha()`;
+window["noans1"+c] = `lambda x: len(x) if type(x) == None`;
+window["noans2"+c] = `lambda x: x if x.__class__ == str else None`;
+window["noans3"+c] = `lambda x: len(x) if x.__name__ == 'str' else None`;
 
 c++;
 window["type"+c] = "4";
@@ -1807,16 +1434,16 @@ window["noans1"+c] = `6`;
 window["noans2"+c] = `9`;
 window["noans3"+c] = `10`;
 
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is a list or a tuple, and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: isinstance(x, (list, tuple))`;
-window["noans1"+c] = `lambda x: type(x) in (list, tuple)`;
-window["noans2"+c] = `lambda x: x.__class__ in (list, tuple)`;
-window["noans3"+c] = `lambda x: x.__class__.__name__ in ('list', 'tuple')`;
+// c++;
+// window["type"+c] = "4";
+// window["des"+c] = `
+// Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is a list or a tuple, and False otherwise?
+// `;
+// window["q"+c] =``;
+// window["ans"+c] = `lambda x: isinstance(x, (list, tuple))`;
+// window["noans1"+c] = `lambda x: type(x) in (list, tuple)`;
+// window["noans2"+c] = `lambda x: x.__class__ in (list, tuple)`;
+// window["noans3"+c] = `lambda x: x.__class__.__name__ in ('list', 'tuple')`;
 
 c++;
 window["type"+c] = "4";
@@ -1831,21 +1458,21 @@ def my_function(x):
         return x * my_function(x - 2)
 
 print(my_function(5))`;
-window["ans"+c] = `120`;
-window["noans1"+c] = `15`;
+window["ans"+c] = `15`;
+window["noans1"+c] = `120`;
 window["noans2"+c] = `21`;
 window["noans3"+c] = `25`;
 
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is a dictionary, and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: isinstance(x, dict)`;
-window["noans1"+c] = `lambda x: type(x) == dict`;
-window["noans2"+c] = `lambda x: x.__class__ == dict`;
-window["noans3"+c] = `lambda x: x.__class__.__name__ == 'dict'`;
+// c++;
+// window["type"+c] = "4";
+// window["des"+c] = `
+// Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is a dictionary, and False otherwise?
+// `;
+// window["q"+c] =``;
+// window["ans"+c] = `lambda x: isinstance(x, dict)`;
+// window["noans1"+c] = `lambda x: type(x) == dict`;
+// window["noans2"+c] = `lambda x: x.__class__ == dict`;
+// window["noans3"+c] = `lambda x: x.__class__.__name__ == 'dict'`;
 
 c++;
 window["type"+c] = "4";
@@ -1860,21 +1487,10 @@ def my_function(x):
         return x * my_function(x // 2)
 
 print(my_function(10))`;
-window["ans"+c] = `80`;
+window["ans"+c] = `100`;
 window["noans1"+c] = `1`;
 window["noans2"+c] = `10`;
 window["noans3"+c] = `320`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns True if x is greater than y, and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x, y: x > y`;
-window["noans1"+c] = `lambda x, y: x >= y`;
-window["noans2"+c] = `lambda x, y: x < y`;
-window["noans3"+c] = `lambda x, y: x <= y`;
 
 c++;
 window["type"+c] = "4";
@@ -1894,16 +1510,16 @@ window["noans1"+c] = `10`;
 window["noans2"+c] = `20`;
 window["noans3"+c] = `25`;
 
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns True if x is a string that contains y, and False otherwise? 
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x, y: y in x`;
-window["noans1"+c] = `lambda x, y: x in y`;
-window["noans2"+c] = `lambda x, y: y.startswith(x)`;
-window["noans3"+c] = `lambda x, y: y.endswith(x)`;
+// c++;
+// window["type"+c] = "4";
+// window["des"+c] = `
+// Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns True if x is a string that contains y, and False otherwise? 
+// `;
+// window["q"+c] =``;
+// window["ans"+c] = `lambda x, y: y in x`;
+// window["noans1"+c] = `lambda x, y: x in y`;
+// window["noans2"+c] = `lambda x, y: y.startswith(x)`;
+// window["noans3"+c] = `lambda x, y: y.endswith(x)`;
 
 c++;
 window["type"+c] = "4";
@@ -1922,18 +1538,18 @@ print(x)`;
 window["ans"+c] = `20`;
 window["noans1"+c] = `10`;
 window["noans2"+c] = `30`;
-window["noans3"+c] = `This code will raise a NameError because x is not defined.`;
+window["noans3"+c] = `NameError: x is not defined`;
 
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is a boolean value, and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: isinstance(x, bool)`;
-window["noans1"+c] = `lambda x: type(x) == bool`;
-window["noans2"+c] = `lambda x: x.__class__ == bool`;
-window["noans3"+c] = `lambda x: x.__class__.__name__ == 'bool'`;
+// c++;
+// window["type"+c] = "4";
+// window["des"+c] = `
+// Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is a boolean value, and False otherwise?
+// `;
+// window["q"+c] =``;
+// window["ans"+c] = `lambda x: isinstance(x, bool)`;
+// window["noans1"+c] = `lambda x: type(x) == bool`;
+// window["noans2"+c] = `lambda x: x.__class__ == bool`;
+// window["noans3"+c] = `lambda x: x.__class__.__name__ == 'bool'`;
 
 c++;
 window["type"+c] = "4";
@@ -1953,16 +1569,16 @@ window["noans1"+c] = `1`;
 window["noans2"+c] = `2`;
 window["noans3"+c] = `4`;
 
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns True if x is equal to y, and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x, y: x == y`;
-window["noans1"+c] = `lambda x, y: x != y`;
-window["noans2"+c] = `lambda x, y: x is y`;
-window["noans3"+c] = `lambda x, y: x is not y`;
+// c++;
+// window["type"+c] = "4";
+// window["des"+c] = `
+// Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns True if x is equal to y, and False otherwise?
+// `;
+// window["q"+c] =``;
+// window["ans"+c] = `lambda x, y: x == y`;
+// window["noans1"+c] = `lambda x, y: x != y`;
+// window["noans2"+c] = `lambda x, y: x is y`;
+// window["noans3"+c] = `lambda x, y: x is not y`;
 
 c++;
 window["type"+c] = "4";
@@ -1977,21 +1593,10 @@ def my_function(x):
         return x * my_function(x // 2)
 
 print(my_function(8))`;
-window["ans"+c] = `12`;
+window["ans"+c] = `64`;
 window["noans1"+c] = `1`;
 window["noans2"+c] = `8`;
 window["noans3"+c] = `16`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is an integer, and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: isinstance(x, int)`;
-window["noans1"+c] = `lambda x: type(x) == int`;
-window["noans2"+c] = `lambda x: x.__class__ == int`;
-window["noans3"+c] = `lambda x: x.__class__.__name__ == 'int'`;
 
 c++;
 window["type"+c] = "4";
@@ -2014,17 +1619,6 @@ window["noans3"+c] = `25`;
 c++;
 window["type"+c] = "4";
 window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns True if x is greater than y, and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x, y: x > y`;
-window["noans1"+c] = `lambda x, y: x >= y`;
-window["noans2"+c] = `lambda x, y: x < y`;
-window["noans3"+c] = `lambda x, y: x <= y`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
 What is the output of the following code snippet?
 `;
 window["q"+c] =`
@@ -2035,21 +1629,21 @@ def my_function(x):
         return x + my_function(x // 2)
 
 print(my_function(6))`;
-window["ans"+c] = `9`;
+window["ans"+c] = `10`;
 window["noans1"+c] = `1`;
 window["noans2"+c] = `6`;
-window["noans3"+c] = `10`;
+window["noans3"+c] = `9`;
 
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is a list, and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: isinstance(x, list)`;
-window["noans1"+c] = `lambda x: type(x) == list`;
-window["noans2"+c] = `lambda x: x.__class__ == list`;
-window["noans3"+c] = `lambda x: x.__class__.__name__ == 'list'`;
+// c++;
+// window["type"+c] = "4";
+// window["des"+c] = `
+// Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is a list, and False otherwise?
+// `;
+// window["q"+c] =``;
+// window["ans"+c] = `lambda x: isinstance(x, list)`;
+// window["noans1"+c] = `lambda x: type(x) == list`;
+// window["noans2"+c] = `lambda x: x.__class__ == list`;
+// window["noans3"+c] = `lambda x: x.__class__.__name__ == 'list'`;
 
 c++;
 window["type"+c] = "4";
@@ -2069,16 +1663,16 @@ window["noans1"+c] = `1`;
 window["noans2"+c] = `2`;
 window["noans3"+c] = `6`;
 
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns True if x is less than or equal to y, and False otherwise?  
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x, y: x <= y`;
-window["noans1"+c] = `lambda x, y: x < y`;
-window["noans2"+c] = `lambda x, y: x >= y`;
-window["noans3"+c] = `lambda x, y: x > y`;
+// c++;
+// window["type"+c] = "4";
+// window["des"+c] = `
+// Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns True if x is less than or equal to y, and False otherwise?  
+// `;
+// window["q"+c] =``;
+// window["ans"+c] = `lambda x, y: x <= y`;
+// window["noans1"+c] = `lambda x, y: x < y`;
+// window["noans2"+c] = `lambda x, y: x >= y`;
+// window["noans3"+c] = `lambda x, y: x > y`;
 
 c++;
 window["type"+c] = "4";
@@ -2093,32 +1687,21 @@ def my_function(x):
         return my_function(x - 1) + my_function(x - 2)
 
 print(my_function(6))`;
-window["ans"+c] = `8`;
+window["ans"+c] = `13`;
 window["noans1"+c] = `5`;
 window["noans2"+c] = `10`;
-window["noans3"+c] = `13`;
+window["noans3"+c] = `8`;
 
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is a dictionary, and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: isinstance(x, dict)`;
-window["noans1"+c] = `lambda x: type(x) == dict`;
-window["noans2"+c] = `lambda x: x.__class__ == dict`;
-window["noans3"+c] = `lambda x: x.__class__.__name__ == 'dict'`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns True if x is greater than or equal to y, and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x, y: x >= y`;
-window["noans1"+c] = `lambda x, y: x <= y`;
-window["noans2"+c] = `lambda x, y: x > y`;
-window["noans3"+c] = `lambda x, y: x < y`;
+// c++;
+// window["type"+c] = "4";
+// window["des"+c] = `
+// Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns True if x is greater than or equal to y, and False otherwise?
+// `;
+// window["q"+c] =``;
+// window["ans"+c] = `lambda x, y: x >= y`;
+// window["noans1"+c] = `lambda x, y: x <= y`;
+// window["noans2"+c] = `lambda x, y: x > y`;
+// window["noans3"+c] = `lambda x, y: x < y`;
 
 c++;
 window["type"+c] = "4";
@@ -2143,17 +1726,6 @@ window["noans3"+c] = `13`;
 c++;
 window["type"+c] = "4";
 window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is a string, and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: isinstance(x, str)`;
-window["noans1"+c] = `lambda x: type(x) == str`;
-window["noans2"+c] = `lambda x: x.__class__ == str`;
-window["noans3"+c] = `lambda x: x.__class__.__name__ == 'str'`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
 What is the output of the following code snippet?
 `;
 window["q"+c] =`
@@ -2172,17 +1744,6 @@ window["noans3"+c] = `16`;
 c++;
 window["type"+c] = "4";
 window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns True if x is less than y, and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x, y: x < y`;
-window["noans1"+c] = `lambda x, y: x > y`;
-window["noans2"+c] = `lambda x, y: x <= y`;
-window["noans3"+c] = `lambda x, y: x >= y`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
 What is the output of the following code snippet?
 `;
 window["q"+c] =`
@@ -2193,21 +1754,10 @@ def my_function(x):
         return 2 * my_function(x - 1)
 
 print(my_function(4))`;
-window["ans"+c] = `8`;
+window["ans"+c] = `16`;
 window["noans1"+c] = `4`;
 window["noans2"+c] = `12`;
-window["noans3"+c] = `16`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns True if x is an integer, and False otherwise?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: isinstance(x, int)`;
-window["noans1"+c] = `lambda x: type(x) == int`;
-window["noans2"+c] = `lambda x: x.__class__ == int`;
-window["noans3"+c] = `lambda x: x.__class__.__name__ == 'int'`;
+window["noans3"+c] = `8`;
 
 c++;
 window["type"+c] = "4";
@@ -2230,17 +1780,6 @@ window["noans3"+c] = `5`;
 c++;
 window["type"+c] = "4";
 window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes two arguments, x and y, and returns the sum of their squares?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x, y: x * x + y * y`;
-window["noans1"+c] = `lambda x, y: x ** 2 + y ** 2`;
-window["noans2"+c] = `lambda x, y: pow(x, 2) + pow(y, 2)`;
-window["noans3"+c] = `lambda x, y: math.pow(x, 2) + math.pow(y, 2)`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
 What is the output of the following code snippet?
 `;
 window["q"+c] =`
@@ -2259,17 +1798,6 @@ window["noans3"+c] = `12`;
 c++;
 window["type"+c] = "4";
 window["des"+c] = `
-Which of the following is the correct way to define a lambda function that takes a single argument, x, and returns the absolute value of x?
-`;
-window["q"+c] =``;
-window["ans"+c] = `lambda x: abs(x)`;
-window["noans1"+c] = `lambda x: x.abs()`;
-window["noans2"+c] = `lambda x: math.abs(x)`;
-window["noans3"+c] = `lambda x: x.__abs__()`;
-
-c++;
-window["type"+c] = "4";
-window["des"+c] = `
 What is the output of the following code snippet?
 `;
 window["q"+c] =`
@@ -2280,9 +1808,9 @@ def my_function(x):
         return my_function(x // 2) + my_function(x // 2)
 
 print(my_function(10))`;
-window["ans"+c] = `4`;
+window["ans"+c] = `16`;
 window["noans1"+c] = `2`;
-window["noans2"+c] = `3`;
+window["noans2"+c] = `4`;
 window["noans3"+c] = `5`;
 
 c++;
