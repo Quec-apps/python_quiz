@@ -24,7 +24,7 @@ obj.display()`;
 window["ans"+e] = `10 20`;
 window["noans1"+e] = `10`;
 window["noans2"+e] = `20`;
-window["noans3"+e] = `None of the above`;
+window["noans3"+e] = `None`;
 
 e++;
 window["type"+e] = "4";
@@ -50,7 +50,7 @@ obj.display()`;
 window["ans"+e] = `2`;
 window["noans1"+e] = `1`;
 window["noans2"+e] = `Error`;
-window["noans3"+e] = `None of the above`;
+window["noans3"+e] = `None`;
 
 e++;
 window["type"+e] = "4";
@@ -71,7 +71,7 @@ print(obj.a)`;
 window["ans"+e] = `10`;
 window["noans1"+e] = `20`;
 window["noans2"+e] = `Error`;
-window["noans3"+e] = `None of the above`;
+window["noans3"+e] = `30`;
 
 e++;
 window["type"+e] = "4";
@@ -92,7 +92,7 @@ print(obj.b)`;
 window["ans"+e] = `20`;
 window["noans1"+e] = `10`;
 window["noans2"+e] = `Error`;
-window["noans3"+e] = `None of the above`;
+window["noans3"+e] = `30`;
 
 e++;
 window["type"+e] = "4";
@@ -112,7 +112,7 @@ print(obj1 + obj2)`;
 window["ans"+e] = `30`;
 window["noans1"+e] = `10`;
 window["noans2"+e] = `20`;
-window["noans3"+e] = `None of the above`;
+window["noans3"+e] = `40`;
 
 e++;
 window["type"+e] = "4";
@@ -138,7 +138,7 @@ else:
 window["ans"+e] = `obj1 is less than obj2`;
 window["noans1"+e] = `obj1 is greater than or equal to obj2`;
 window["noans2"+e] = `Error`;
-window["noans3"+e] = `None of the above`;
+window["noans3"+e] = `None`;
 
 e++;
 window["type"+e] = "4";
@@ -159,10 +159,10 @@ class B(A):
 
 obj = B(10, 20)
 obj.display()`;
-window["ans"+e] = `10 20`;
-window["noans1"+e] = `10`;
-window["noans2"+e] = `20`;
-window["noans3"+e] = `None of the above`;
+window["ans"+e] = `50 70`;
+window["noans1"+e] = `50`;
+window["noans2"+e] = `70`;
+window["noans3"+e] = `5070`;
 
 e++;
 window["type"+e] = "4";
@@ -185,7 +185,7 @@ obj1 = A(10)
 obj2 = B(20, 30)
 obj1.display()
 obj2.display()`;
-window["ans"+e] = `Error`;
+window["ans"+e] = `AttributeError`;
 window["noans1"+e] = `10, 20`;
 window["noans2"+e] = `20, 30`;
 window["noans3"+e] = `10, 30`;
@@ -207,7 +207,7 @@ print(obj)`;
 window["ans"+e] = `10`;
 window["noans1"+e] = `A object`;
 window["noans2"+e] = `Error`;
-window["noans3"+e] = `None of the above`;
+window["noans3"+e] = `None`;
 
 e++;
 window["type"+e] = "4";
@@ -224,10 +224,10 @@ class A:
 obj1 = A(10)
 obj2 = A(20)
 print(obj1, obj2)`;
-window["ans"+e] = `10, 20`;
+window["ans"+e] = `10 20`;
 window["noans1"+e] = `A object, A object`;
 window["noans2"+e] = `Error`;
-window["noans3"+e] = `None of the above`;
+window["noans3"+e] = `None`;
 
 e++;
 window["type"+e] = "4";
@@ -279,7 +279,7 @@ else:
 window["ans"+e] = `obj1 is less than obj2`;
 window["noans1"+e] = `obj1 is greater than or equal to obj2`;
 window["noans2"+e] = `Error`;
-window["noans3"+e] = `None of the above`;
+window["noans3"+e] = `None`;
 
 e++;
 window["type"+e] = "4";
@@ -306,8 +306,8 @@ class B:
 obj1 = A(10)
 obj2 = B(20)
 print(obj1 + obj2)`;
-window["ans"+e] = `30`;
-window["noans1"+e] = `A object`;
+window["ans"+e] = `TypeError`;
+window["noans1"+e] = `30`;
 window["noans2"+e] = `10`;
 window["noans3"+e] = `20`;
 
@@ -397,10 +397,10 @@ obj1 = A(10)
 obj2 = B(20, 30)
 obj1.display()
 obj2.display()`;
-window["ans"+e] = `20, 30`;
-window["noans1"+e] = `10, 20 30`;
+window["ans"+e] = `10, 20 30`;
+window["noans1"+e] = `20, 30`;
 window["noans2"+e] = `Error`;
-window["noans3"+e] = `None of the above`;
+window["noans3"+e] = `None`;
 
 e++;
 window["type"+e] = "4";
@@ -432,7 +432,7 @@ show(obj2)`;
 window["ans"+e] = `10, 20 30`;
 window["noans1"+e] = `20, 30`;
 window["noans2"+e] = `Error`;
-window["noans3"+e] = `None of the above`;
+window["noans3"+e] = `None`;
 
 e++;
 window["type"+e] = "4";
@@ -460,8 +460,8 @@ obj4 = B(20)
 
 print(obj1 < obj2)
 print(obj3 < obj4)`;
-window["ans"+e] = `True False`;
-window["noans1"+e] = `True True`;
+window["ans"+e] = `True True`;
+window["noans1"+e] = `True False`;
 window["noans2"+e] = `False True`;
 window["noans3"+e] = `False False`;
 
@@ -514,9 +514,9 @@ class B(A):
 obj = B(10, 20)
 print(obj.a, obj.b)`;
 window["ans"+e] = `10 20`;
-window["noans1"+e] = `Error`;
-window["noans2"+e] = `None`;
-window["noans3"+e] = `None of the above`;
+window["noans1"+e] = `10`;
+window["noans2"+e] = `20`;
+window["noans3"+e] = `1020`;
 
 e++;
 window["type"+e] = "4";
@@ -540,9 +540,9 @@ class C(B):
 obj = C(10, 20, 30)
 print(obj.a, obj.b, obj.c)`;
 window["ans"+e] = `10 20 30`;
-window["noans1"+e] = `Error`;
-window["noans2"+e] = `None`;
-window["noans3"+e] = `None of the above`;
+window["noans1"+e] = `[10, 20, 30]`;
+window["noans2"+e] = `102030`;
+window["noans3"+e] = `Error`;
 
 e++;
 window["type"+e] = "4";
@@ -597,7 +597,7 @@ class C(B):
 obj = C(10, 20, 30)
 print(obj)`;
 window["ans"+e] = `"10 20 30"`;
-window["noans1"+e] = `10 20 30`;
+window["noans1"+e] = `102030`;
 window["noans2"+e] = `[10, 20, 30]`;
 window["noans3"+e] = `{10, 20, 30}`;
 
@@ -622,12 +622,12 @@ class C(B):
     def __repr__(self):
         return str(self.a) + " " + str(self.b) + " " + str(self.c)
 
-obj = C(10, 20, 30)
+obj = C(5, 7, 9)
 print(obj)`;
-window["ans"+e] = `10 20 30`;
-window["noans1"+e] = `[10, 20, 30]`;
-window["noans2"+e] = `{10, 20, 30}`;
-window["noans3"+e] = `"10 20 30"`;
+window["ans"+e] = `5 7 9`;
+window["noans1"+e] = `[5, 7, 9]`;
+window["noans2"+e] = `{5, 7, 9}`;
+window["noans3"+e] = `"579"`;
 
 e++;
 window["type"+e] = "4";
@@ -663,8 +663,8 @@ print(isinstance(obj2, C))
 print(isinstance(obj3, A))
 print(isinstance(obj3, B))
 print(isinstance(obj3, C))`;
-window["ans"+e] = `True True False True True True False False True`;
-window["noans1"+e] = `True False False True True False True True True`;
+window["ans"+e] = `True False False True True False True True True`;
+window["noans1"+e] = `True True False True True True False False True`;
 window["noans2"+e] = `True False False True True True False False True`;
 window["noans3"+e] = `True False False True True True True True True`;
 
@@ -946,10 +946,10 @@ obj3 = C(10, 20, 30)
 print(isinstance(obj1, C))
 print(isinstance(obj2, A))
 print(isinstance(obj3, B))`;
-window["ans"+e] = `False True False`;
+window["ans"+e] = `False True True`;
 window["noans1"+e] = `True False True`;
 window["noans2"+e] = `False False False`;
-window["noans3"+e] = `False True True`;
+window["noans3"+e] = `False True False`;
 
 e++;
 window["type"+e] = "4";
@@ -1059,8 +1059,8 @@ obj2 = B(10, 20)
 obj3 = C(10, 20, 30)
 
 print(obj1.a, obj2.a, obj2.b, obj3.a, obj3.b, obj3.c)`;
-window["ans"+e] = `AttributeError: 'B' object has no attribute 'c'`;
-window["noans1"+e] = `10 10 20 10 20 30`;
+window["ans"+e] = `10 10 20 10 20 30`;
+window["noans1"+e] = `AttributeError: 'B' object has no attribute 'c'`;
 window["noans2"+e] = `10 None 20 10`;
 window["noans3"+e] = `AttributeError: 'A' object has no attribute 'b'`;
 
@@ -1092,7 +1092,7 @@ obj.display()`;
 window["ans"+e] = `10 20 30`;
 window["noans1"+e] = `None None None`;
 window["noans2"+e] = `AttributeError: 'C' object has no attribute 'display'`;
-window["noans3"+e] = `TypeError: display() takes 0 positional arguments but 1 was given`;
+window["noans3"+e] = `TypeError`;
 
 e++;
 window["type"+e] = "4";
@@ -1126,9 +1126,8 @@ window["noans3"+e] = `TypeError: display() takes 0 positional arguments but 1 wa
 
 e++;
 window["type"+e] = "4";
-window["des"+e] = ``;
+window["des"+e] = `What is the output of the following code?`;
 window["q"+e] =`
-What is the output of the following code?
 class A:
     def __init__(self, a):
         self.a = a
@@ -1191,8 +1190,8 @@ obj3 = C(10, 20, 30)
 obj1.display()
 obj2.display()
 obj3.display()`;
-window["ans"+e] = `10, 20, 30, 10, 20, 30, 10, 20, 30`;
-window["noans1"+e] = `10, 10, 20, 10, 20, 30`;
+window["ans"+e] = `10, 10, 20, 10, 20, 30`;
+window["noans1"+e] = `10, 20, 30, 10, 20, 30, 10, 20, 30`;
 window["noans2"+e] = `10, None, None, 10, 20, None, 10, 20, 30`;
 window["noans3"+e] = `10, None, None, 10, 20, 30, 10, 20, 30`;
 
@@ -1227,7 +1226,7 @@ class D(B, C):
 obj = D(10, 20, 30, 40)
 
 obj.display()`;
-window["ans"+e] = `AttributeError: 'C' object has no attribute 'b'`;
+window["ans"+e] = `TypeError: C.__init__() missing 1 required positional argument: 'c'`;
 window["noans1"+e] = `10 20 30 40`;
 window["noans2"+e] = `TypeError: init() takes 3 positional arguments but 4 were given`;
 window["noans3"+e] = `AttributeError: 'D' object has no attribute 'display'`;
@@ -1266,88 +1265,10 @@ class D(B, C):
 obj = D(10, 20, 30, 40)
 
 obj.display()`;
-window["ans"+e] = `10 20 30`;
+window["ans"+e] = `TypeError: C.__init__() missing 1 required positional argument: 'c'`;
 window["noans1"+e] = `10 20`;
 window["noans2"+e] = `AttributeError: 'D' object has no attribute 'display'`;
-window["noans3"+e] = `TypeError: display() takes 0 positional arguments but 1 was given`;
-
-e++;
-window["type"+e] = "4";
-window["des"+e] = `
-What is the output of the following code?`;
-window["q"+e] =`
-class A:
-    def __init__(self, a):
-        self.a = a
-
-class B(A):
-    def __init__(self, a, b):
-        super().__init__(a)
-        self.b = b
-
-    def display(self):
-        print(self.a, self.b)
-
-class C(A):
-    def __init__(self, a, c):
-        super().__init__(a)
-        self.c = c
-
-class D(B, C):
-    def __init__(self, a, b, c, d):
-        B.__init__(self, a, b)
-        C.__init__(self, a, c)
-        self.d = d
-
-obj = D(10, 20, 30, 40)
-
-obj.display()`;
-window["ans"+e] = `10 20 30`;
-window["noans1"+e] = `10 20`;
-window["noans2"+e] = `AttributeError: 'D' object has no attribute 'display'`;
-window["noans3"+e] = `TypeError: display() takes 0 positional arguments but 1 was given`;
-
-e++;
-window["type"+e] = "4";
-window["des"+e] = `
-What is the output of the following code?`;
-window["q"+e] =`
-class A:
-    def __init__(self, a):
-        self.a = a
-
-    def display(self):
-        print(self.a)
-
-class B(A):
-    def __init__(self, a, b):
-        super().__init__(a)
-        self.b = b
-
-    def display(self):
-        print(self.a, self.b)
-
-class C(A):
-    def __init__(self, a, c):
-        super().__init__(a)
-        self.c = c
-
-class D(B, C):
-    def __init__(self, a, b, c, d):
-        B.__init__(self, a, b)
-        C.__init__(self, a, c)
-        self.d = d
-
-    def display(self):
-        print(self.a, self.b, self.c, self.d)
-
-obj = D(10, 20, 30, 40)
-
-super(C, obj).display()`;
-window["ans"+e] = `10`;
-window["noans1"+e] = `30`;
-window["noans2"+e] = `AttributeError: 'D' object has no attribute 'display'`;
-window["noans3"+e] = `TypeError: display() takes 0 positional arguments but 1 was given`;
+window["noans3"+e] = `10 20 30`;
 
 e++;
 window["type"+e] = "4";
@@ -1436,203 +1357,10 @@ class D(B, C):
 obj = D(10, 20, 30, 40)
 
 obj.display()`;
-window["ans"+e] = `10 20 30`;
+window["ans"+e] = `TypeError: C.__init__() missing 1 required positional argument: 'c'`;
 window["noans1"+e] = `10 20`;
 window["noans2"+e] = `AttributeError: 'D' object has no attribute 'display'`;
-window["noans3"+e] = `TypeError: display() takes 0 positional arguments but 1 was given`;
-
-e++;
-window["type"+e] = "4";
-window["des"+e] = `
-What is the output of the following code?`;
-window["q"+e] =`
-class A:
-    def __init__(self, a):
-        self.a = a
-
-class B(A):
-    def __init__(self, a, b):
-        super().__init__(a)
-        self.b = b
-
-    def display(self):
-        print(self.a, self.b)
-
-class C(A):
-    def __init__(self, a, c):
-        super().__init__(a)
-        self.c = c
-
-class D(B, C):
-    def __init__(self, a, b, c, d):
-        super().__init__(a, b)
-        self.d = d
-        self.c = c
-
-obj = D(10, 20, 30, 40)
-
-obj.display()`;
-window["ans"+e] = `10 20 30`;
-window["noans1"+e] = `10 20`;
-window["noans2"+e] = `AttributeError: 'D' object has no attribute 'display'`;
-window["noans3"+e] = `AttributeError: 'D' object has no attribute 'a'`;
-
-e++;
-window["type"+e] = "4";
-window["des"+e] = `
-What is the output of the following code?`;
-window["q"+e] =`
-class A:
-    def __init__(self, a):
-        self.a = a
-
-class B(A):
-    def __init__(self, a, b):
-        super().__init__(a)
-        self.b = b
-
-    def display(self):
-        print(self.a, self.b)
-
-class C(A):
-    def __init__(self, a, c):
-        super().__init__(a)
-        self.c = c
-
-class D(B, C):
-    def __init__(self, a, b, c, d):
-        super().__init__(a, b)
-        self.d = d
-        self.c = c
-
-obj = D(10, 20, 30, 40)
-
-print(obj.a)`;
-window["ans"+e] = `10`;
-window["noans1"+e] = `20`;
-window["noans2"+e] = `30`;
-window["noans3"+e] = `40`;
-
-e++;
-window["type"+e] = "4";
-window["des"+e] = `
-What is the output of the following code?`;
-window["q"+e] =`
-class A:
-    def __init__(self, a):
-        self.a = a
-
-class B(A):
-    def __init__(self, a, b):
-        super().__init__(a)
-        self.b = b
-
-    def display(self):
-        print(self.a, self.b)
-
-class C(A):
-    def __init__(self, a, c):
-        super().__init__(a)
-        self.c = c
-
-class D(B, C):
-    def __init__(self, a, b, c, d):
-        super().__init__(a, b)
-        self.d = d
-        self.c = c
-
-obj = D(10, 20, 30, 40)
-
-print(obj.c)`;
-window["noans1"+e] = `10`;
-window["noans2"+e] = `20`;
-window["noans3"+e] = `30`;
-window["noans4"+e] = `40`;
-
-e++;
-window["type"+e] = "4";
-window["des"+e] = `
-What is the output of the following code?`;
-window["q"+e] =`
-class A:
-    def __init__(self, a):
-        self.a = a
-
-    def display(self):
-        print(self.a)
-
-class B(A):
-    def __init__(self, a, b):
-        super().__init__(a)
-        self.b = b
-
-class C(A):
-    def __init__(self, a, c):
-        super().__init__(a)
-        self.c = c
-
-class D(B, C):
-    def __init__(self, a, b, c, d):
-        super().__init__(a, b)
-        self.d = d
-        self.c = c
-
-obj = D(10, 20, 30, 40)
-
-obj.display()`;
-window["noans1"+e] = `10`;
-window["noans2"+e] = `20`;
-window["noans3"+e] = `30`;
-window["noans4"+e] = `AttributeError: 'D' object has no attribute 'display'`;
-
-e++;
-window["type"+e] = "4";
-window["des"+e] = `
-What is the output of the following code?`;
-window["q"+e] =`
-class A:
-    def __init__(self, a):
-        self.a = a
-
-    def display(self):
-        print(self.a)
-
-class B(A):
-    def __init__(self, a, b):
-        super().__init__(a)
-        self.b = b
-
-class C(A):
-    def __init__(self, a, c):
-        super().__init__(a)
-        self.c = c
-
-class D(B, C):
-    def __init__(self, a, b, c, d):
-        super().__init__(a, b)
-        self.d = d
-        self.c = c
-
-obj = D(10, 20, 30, 40)
-
-print(isinstance(obj, A))`;
-window["ans"+e] = `True`;
-window["noans1"+e] = `False`;
-
-e++;
-window["type"+e] = "4";
-window["des"+e] = `
-What is the output of the following code?`;
-window["q"+e] =`
-class A:
-    pass
-
-class B(A):
-    pass
-
-print(issubclass(B, A))`;
-window["ans"+e] = `True`;
-window["noans1"+e] = `False`;
+window["noans3"+e] = `10 20 30`;
 
 e++;
 window["type"+e] = "4";
@@ -1651,8 +1379,8 @@ obj2 = B()
 print(isinstance(obj1, A))
 print(isinstance(obj2, B))
 print(isinstance(obj2, A))`;
-window["ans"+e] = `True True False`;
-window["noans1"+e] = `True True True`;
+window["ans"+e] = `True True True`;
+window["noans1"+e] = `True True False`;
 window["noans2"+e] = `False True True`;
 window["noans3"+e] = `False True False`;
 
@@ -1747,6 +1475,8 @@ obj = B(10, 20)
 print(isinstance(obj, A))`;
 window["ans"+e] = `True`;
 window["noans1"+e] = `False`;
+window["noans2"+e] = `None`;
+window["noans3"+e] = `Error`;
 
 e++;
 window["type"+e] = "4";
@@ -1768,6 +1498,8 @@ class D(B, C):
 print(issubclass(D, A))`;
 window["ans"+e] = `True`;
 window["noans1"+e] = `False`;
+window["noans2"+e] = `None`;
+window["noans3"+e] = `Error`;
 
 e++;
 window["type"+e] = "4";
@@ -1816,8 +1548,8 @@ c1 = Complex(1, 2)
 c2 = Complex(2, 3)
 
 print(c1 + c2)`;
-window["ans"+e] = `3+6i`;
-window["noans1"+e] = `3+5i`;
+window["ans"+e] = `3+5i`;
+window["noans1"+e] = `3+6i`;
 window["noans2"+e] = `2+5i`;
 window["noans3"+e] = `2+6i`;
 
@@ -1839,6 +1571,8 @@ c2 = Complex(1, 2)
 print(c1 == c2)`;
 window["ans"+e] = `True`;
 window["noans1"+e] = `False`;
+window["noans2"+e] = `None`;
+window["noans3"+e] = `Error`;
 
 e++;
 window["type"+e] = "4";
@@ -1859,6 +1593,8 @@ c2 = Complex(2, 3)
 print(c1 == c2)`;
 window["ans"+e] = `False`;
 window["noans1"+e] = `True`;
+window["noans2"+e] = `None`;
+window["noans3"+e] = `Error`;
 
 e++;
 window["type"+e] = "4";
@@ -1937,33 +1673,6 @@ window["ans"+e] = `1 2 3`;
 window["noans1"+e] = `AttributeError: 'C' object has no attribute 'a'`;
 window["noans2"+e] = `AttributeError: 'B' object has no attribute 'a'`;
 window["noans3"+e] = `AttributeError: 'A' object has no attribute 'b'`;
-
-e++;
-window["type"+e] = "4";
-window["des"+e] = `
-What is the output of the following code?`;
-window["q"+e] =`
-class A:
-    def __init__(self):
-        self.a = 1
-
-class B(A):
-    def __init__(self):
-        super().__init__()
-        self.b = 2
-
-class C(A):
-    def __init__(self):
-        super().__init__()
-        self.c = 3
-
-obj = C()
-
-print(obj.a, obj.b, obj.c)`;
-window["ans"+e] = `1 AttributeError: 'C' object has no attribute 'b' 3`;
-window["noans1"+e] = `1 AttributeError: 'C' object has no attribute 'b' AttributeError: 'C' object has no attribute 'c'`;
-window["noans2"+e] = `1 2 3`;
-window["noans3"+e] = `AttributeError: 'C' object has no attribute 'b'`;
 
 e++;
 window["type"+e] = "4";
@@ -2014,8 +1723,8 @@ class C(A, B):
 obj = C()
 
 print(obj.a, obj.b, obj.c)`;
-window["ans"+e] = `1 2 3`;
-window["noans1"+e] = `AttributeError: 'C' object has no attribute 'a'`;
+window["ans"+e] = `AttributeError: 'C' object has no attribute 'b'`;
+window["noans1"+e] = `1 2 3`;
 window["noans2"+e] = `AttributeError: 'B' object has no attribute 'a'`;
 window["noans3"+e] = `AttributeError: 'A' object has no attribute 'b'`;
 
@@ -2039,7 +1748,7 @@ print(a3)`;
 window["ans"+e] = `TypeError: unsupported operand type(s) for +: 'A' and 'A'`;
 window["noans1"+e] = `3`;
 window["noans2"+e] = `TypeError: unsupported operand type(s) for +: 'int' and 'A'`;
-window["noans3"+e] = `None of the above`;
+window["noans3"+e] = `None`;
 
 e++;
 window["type"+e] = "4";
@@ -2064,7 +1773,7 @@ print(a3)`;
 window["ans"+e] = `3`;
 window["noans1"+e] = `TypeError: unsupported operand type(s) for +: 'A' and 'A'`;
 window["noans2"+e] = `TypeError: unsupported operand type(s) for +: 'int' and 'A'`;
-window["noans3"+e] = `None of the above`;
+window["noans3"+e] = `None`;
 
 e++;
 window["type"+e] = "4";
@@ -2089,7 +1798,7 @@ print(a3)`;
 window["ans"+e] = `3`;
 window["noans1"+e] = `TypeError: unsupported operand type(s) for +: 'A' and 'A'`;
 window["noans2"+e] = `TypeError: unsupported operand type(s) for +: 'int' and 'A'`;
-window["noans3"+e] = `None of the above`;
+window["noans3"+e] = `None`;
 
 e++;
 window["type"+e] = "4";
@@ -2111,10 +1820,10 @@ a2 = A(2)
 a3 = a1 + a2
 
 print(a1 + a2 + a3)`;
-window["ans"+e] = `TypeError: unsupported operand type(s) for +: 'int' and 'NoneType'`;
-window["noans1"+e] = `6`;
+window["ans"+e] = `6`;
+window["noans1"+e] = `TypeError: unsupported operand type(s) for +: 'int' and 'NoneType'`;
 window["noans2"+e] = `TypeError: unsupported operand type(s) for +: 'A' and 'A'`;
-window["noans3"+e] = `None of the above`;
+window["noans3"+e] = `None`;
 
 e++;
 window["type"+e] = "4";
@@ -2165,8 +1874,8 @@ a2 = A(2)
 
 print(a1 > a2)
 print(a2 > a1)`;
-window["ans"+e] = `True False`;
-window["noans1"+e] = `False True`;
+window["ans"+e] = `False True`;
+window["noans1"+e] = `True False`;
 window["noans2"+e] = `False False`;
 window["noans3"+e] = `True True`;
 
@@ -2221,8 +1930,8 @@ print(isinstance(a, A))
 print(isinstance(b, A))
 print(isinstance(a, B))
 print(isinstance(b, B))`;
-window["ans"+e] = `True True True False`;
-window["noans1"+e] = `True True False True`;
+window["ans"+e] = `True True False True`;
+window["noans1"+e] = `True True True False`;
 window["noans2"+e] = `True True False False`;
 window["noans3"+e] = `True True True True`;
 
@@ -2301,8 +2010,8 @@ b = B(1, 2)
 print(getattr(b, 'a'))
 print(getattr(b, 'b'))
 print(getattr(b, 'c', 3))`;
-window["ans"+e] = `1 2 None`;
-window["noans1"+e] = `1 2 3`;
+window["ans"+e] = `1 2 3`;
+window["noans1"+e] = `1 2 None`;
 window["noans2"+e] = `AttributeError: 'B' object has no attribute 'c'`;
 window["noans3"+e] = `TypeError: getattr expected at least 2 arguments, got 1`;
 
