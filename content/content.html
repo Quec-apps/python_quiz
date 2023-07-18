@@ -295,7 +295,6 @@
             Prism.highlightAll();
             $(".ques-bg").text(window["des" + openedLevel]);
             tmp_var = window["q" + openedLevel].replace("\n", '');
-            console.log(tmp_var);
             if (tmp_var == "\n" || tmp_var == "") {
                 console.log("Hooray");
                 $(".code-bg").css({opacity:'0'});
@@ -322,7 +321,10 @@
         }
         Append();
 
+        inter = parseInt(localStorage.inter);
         $("#ans").click(function () {
+            inter++;
+            CheckInter();
             document.getElementById('correct-aud').play();
             console.log("Correct!")
             $("#ans").css({ backgroundColor: 'green', color: 'white' });
@@ -346,6 +348,8 @@
             }
         });
         $(".noans").click(function () {
+            inter++;
+            CheckInter();
             document.getElementById('wrong-aud').play();
             $(this).css({ backgroundColor: 'red', color: 'white' });
             wrongDict[openedType]++;
@@ -391,6 +395,14 @@
                 window.history.back();
             }, 500);
         });
+
+        function CheckInter() {
+            if (inter > 5) {
+                inter =1;
+                localStorage.inter=1;
+                parent.location='https://inter';
+            }
+        }
     </script>
 </body>
 
