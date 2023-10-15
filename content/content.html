@@ -191,6 +191,20 @@
             color: white;
             font-size: xx-large;
         }
+        .report-bg {
+            position: fixed;
+            right: 10px;
+            display: flex;
+            align-items: center;
+            color: #d72828;
+        } .report-bg:active {
+            opacity: .3;
+        }
+        .error-img {
+            margin-left: 4px;
+            width: 20px;
+
+        }
     </style>
     <link rel="stylesheet" href="res/prism/prism.css">
 </head>
@@ -199,6 +213,10 @@
     <div class="top">
         <img src="res/image/back.svg" alt="back" class="back-img">
         <div class="lev-bg"><span id="level"></span>/<span id="totalLevel"></span></div>
+        <div class="report-bg">
+            report
+            <img src="res/image/error.png" class="error-img">
+        </div>
     </div>
     <div class="mid">
         <div class="type">
@@ -292,6 +310,7 @@
         $(".type-txt").text(AppendtName(openedType));
         function Append() {
             $("code").text(window["q" + openedLevel]); console.log(window["q" + openedLevel]);
+            console.log(Prism);
             Prism.highlightAll();
             $(".ques-bg").text(window["des" + openedLevel]);
             tmp_var = window["q" + openedLevel].replace("\n", '');
@@ -394,6 +413,15 @@
             setTimeout(() => {
                 window.history.back();
             }, 500);
+        });
+
+        $(".report-bg").click(function() {
+            window.parent.location = `
+mailto:quec.developer@gmail.com?subject=Error%20reporting&
+body=%20opnLvl-${openedLevel}%20opnTyp-${openedType}%0D%0A
+(Please%20dont%20edit%20above%20line)%0D%0A
+(Write%20something%20below%20to%20clarify%20the%20error%20(optional))
+`;
         });
 
         function CheckInter() {
