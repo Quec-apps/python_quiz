@@ -210,6 +210,12 @@
 </head>
 
 <body>
+    <script>
+        if (localStorage.is_weekly == 1) {
+            //opened weekly challenge
+            $("body").css({backgroundColor:'#d3f26a', color:'#272a2c'})
+        }
+    </script>
     <div class="top">
         <img src="res/image/back.svg" alt="back" class="back-img">
         <div class="lev-bg"><span id="level"></span>/<span id="totalLevel"></span></div>
@@ -271,6 +277,7 @@
             if (_type == "fil") return "file";
             if (_type == "oop") return "oops";
             if (_type == "adv") return "advanced";
+            if (_type == "wee") return "weekly";
         }
         function AppendtName(_type) {
             if (_type == "bas") return "Basics";
@@ -279,6 +286,7 @@
             if (_type == "fil") return "File";
             if (_type == "oop") return "Object And Class";
             if (_type == "adv") return "Advanced";
+            if (_type == "wee") return "Weekly Challenge";
         }
         $("body").prepend(`<script src="res/var/${ScriptName(openedType)}.js" id="_script">`);
         darkMode = localStorage.darkMode;
@@ -302,6 +310,7 @@
 
         levelDict = JSON.parse(localStorage.levelDict);
         level = levelDict[openedType];
+        
         openedLevel = levelDict[openedType];
         totalLevel = localStorage.getItem(openedType+'Total');
         wrongDict = JSON.parse(localStorage.wrongDict);
@@ -309,13 +318,11 @@
         //Capitalising first letter
         $(".type-txt").text(AppendtName(openedType));
         function Append() {
-            $("code").text(window["q" + openedLevel]); console.log(window["q" + openedLevel]);
-            console.log(Prism);
+            $("code").text(window["q" + openedLevel]);
             Prism.highlightAll();
             $(".ques-bg").text(window["des" + openedLevel]);
             tmp_var = window["q" + openedLevel].replace("\n", '');
             if (tmp_var == "\n" || tmp_var == "") {
-                console.log("Hooray");
                 $(".code-bg").css({opacity:'0'});
             }
             else
@@ -336,7 +343,7 @@
                 }
             });
 
-            $("#ans, .noans").css({ backgroundColor: 'white', color: '#3f87f2' });
+            $("#ans, .noans").css({ backgroundColor: 'white', color: 'black' });
         }
         Append();
 

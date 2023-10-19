@@ -38,9 +38,9 @@
             width: 100vw;
             height: 100vh;
             transform: scale(0);
-            background-color: #3f87f2;
+            background-color: white;
             transform-origin: center;
-            transition: all .3s ease-in;
+            transition: scale .3s ease-in;
             animation: intro .3s ease-in-out 1;
         }
 
@@ -106,6 +106,10 @@
             transition: all .3s ease-in;
             box-shadow: inset 1px 1px 9px rgb(24 33 46);
         }
+        .weekly-ct {
+            background-color: #d3f26a;
+            color: #272a2c;
+        }
 
         .ct:active {
             opacity: .4;
@@ -159,6 +163,17 @@
         <div class="reset">Reset</div>
     </div>
     <div class="btm">
+        <div class="ct weekly-ct" onclick="CtClick('wee'); localStorage.is_weekly = 1;">
+            <div class="ct-ti">Weekly Challenge</div>
+            <div class="ct-des">New challenges will be added weekly</div>
+            <div class="ct-level-bg">
+                <div class="wrong-bg">
+                    <img src="res/image/wrong.svg" class="wrong-img">
+                    <span class="wrong-txt" id="weekly-wrong"></span>
+                </div>
+                <div class="ct-level"><span id="weekly-level"></span> / <span id="weekly-total"></span></div>
+            </div>
+        </div>
         <div class="ct" onclick="CtClick('bas')">
             <div class="ct-ti">Basic</div>
             <div class="ct-des">variables, datatypes, type conversion</div>
@@ -192,11 +207,6 @@
                 <div class="ct-level"><span id="function-level"></span> / <span id="function-total"></span></div>
             </div>
         </div>
-        <!-- <div class="ct">
-            <div class="ct-ti">Datatypes</div>
-            <div class="ct-des">numbers, list, tuple, string, set, dictionary</div>
-            <div class="ct-level">27/138</div>
-        </div> -->
         <div class="ct" onclick="CtClick('fil')">
             <div class="ct-ti">Files</div>
             <div class="ct-des">file operation, directory, exception, exception handling, user-defined exception</div>
@@ -296,6 +306,7 @@
     <script src="res/var/file.js"></script>
     <script src="res/var/oops.js"></script>
     <script src="res/var/advanced.js"></script>
+    <script src="res/var/weekly.js"></script>
     <script>
         localStorage.basTotal = basTotal;
         localStorage.floTotal = floTotal;
@@ -303,8 +314,18 @@
         localStorage.filTotal = filTotal;
         localStorage.oopTotal = oopTotal;
         localStorage.advTotal = advTotal;
+        localStorage.weeTotal = weeTotal;
         levelDict = JSON.parse(localStorage.levelDict);
         wrongDict = JSON.parse(localStorage.wrongDict);
+
+        if (localStorage.is_weekly == 1) {
+            console.log('bluuuuuuuuuuuuu')
+            $(".intro-bg").css({backgroundColor:'#d3f26a'});
+        } else {
+            $(".intro-bg").css({backgroundColor:'#3f87f2'});
+        }
+
+        localStorage.is_weekly = 0;
 
         $("#basics-level").text(levelDict['bas']);
         $("#basics-total").text(basTotal);
@@ -329,6 +350,10 @@
         $("#advanced-level").text(levelDict['adv']);
         $("#advanced-total").text(advTotal);
         $("#advanced-wrong").text(wrongDict['adv']);
+
+        $("#weekly-level").text(levelDict['wee']);
+        $("#weekly-total").text(weeTotal);
+        $("#weekly-wrong").text(wrongDict['wee']);
 
         $(".ct").click(function () {
             setTimeout(() => {

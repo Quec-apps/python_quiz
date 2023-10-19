@@ -57,6 +57,24 @@
             localStorage.wrongDict = '{"bas":0, "flo":0, "fun":0, "fil":0, "oop":0, "adv":0}';
         }
         localStorage.inter =1;
+        levelDict = localStorage.levelDict;
+        wrongDict = localStorage.wrongDict;
+
+        parsedDict = JSON.parse(levelDict);
+        parsedWrongDict = JSON.parse(wrongDict);
+        dictLength = Object.keys(parsedDict).length;
+        console.log(dictLength)
+
+        if (dictLength == 6) {
+            parsedDict['wee'] = 1;
+            parsedWrongDict['wee'] = 0;
+
+            levelDict = JSON.stringify(parsedDict);
+            wrongDict = JSON.stringify(parsedWrongDict);
+
+            localStorage.levelDict = levelDict;
+            localStorage.wrongDict = wrongDict;
+        }
         
         setInterval(() => { location.replace("menu.html"); }, 1900);
         setInterval(() => { $(".title").fadeOut(); }, 1500);
