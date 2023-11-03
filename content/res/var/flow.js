@@ -1109,7 +1109,7 @@ else:
     print('done')`;
 window["ans"+b] = `135done`;
 window["noans1"+b] = `135`;
-window["noans2"+b] = `135done`;
+window["noans2"+b] = `15done`;
 window["noans3"+b] = `None of the above`;
 
 b++;
