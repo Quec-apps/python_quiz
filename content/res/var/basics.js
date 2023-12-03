@@ -997,10 +997,10 @@ window["q"+a] =`
 x = "10.5"
 y = 3
 print(int(x)*y)`;
-window["noans1"+a] = 'ValueError';
-window["noans2"+a] = '10.5';
-window["noans3"+a] = '30.5';
-window["noans4"+a] = '101010';
+window["ans"+a] = 'ValueError';
+window["noans1"+a] = '10.5';
+window["noans2"+a] = '30.5';
+window["noans3"+a] = '101010';
 
 a++;
 window["type"+a] = "4";
