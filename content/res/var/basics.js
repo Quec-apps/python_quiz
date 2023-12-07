@@ -617,12 +617,13 @@ window["noans3"+a] = 'None of the options';
 
 a++;
 window["type"+a] = "4";
-window["des"+a] = 'Which of the following is a valid way to create an empty tuple in Python?';
+window["des"+a] = 'Which of the following is NOT a valid way to create an empty tuple in Python?';
 window["q"+a] =``;
-window["ans"+a] = 'All of the above';
-window["noans1"+a] = '()';
+window["ans"+a] = '(2)';
+window["noans1"+a] = 'None of the options';
 window["noans2"+a] = 'tuple()';
-window["noans3"+a] = '(,)';
+window["noans3"+a] = '(2,)';
+console.log(a);
 
 a++;
 window["type"+a] = "4";
@@ -644,7 +645,6 @@ window["ans"+a] = 'tuple1 + tuple2';
 window["noans1"+a] = 'tuple1.add(tuple2)';
 window["noans2"+a] = 'tuple1.extend(tuple2)';
 window["noans3"+a] = 'None of the options';
-console.log(a)
 
 a++;
 window["type"+a] = "4";
@@ -746,7 +746,7 @@ a++;
 window["type"+a] = "4";
 window["des"+a] = 'Which of the following is a valid way to unpack a tuple in Python?';
 window["q"+a] =``;
-window["ans"+a] = 'All of the above';
+window["ans"+a] = 'All of the options';
 window["noans1"+a] = '(a, = tuple';
 window["noans2"+a] = 'a, b = tuple';
 window["noans3"+a] = '(a, b,) = tuple';
