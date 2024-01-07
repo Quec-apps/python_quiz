@@ -159,10 +159,10 @@ class B(A):
 
 obj = B(10, 20)
 obj.display()`;
-window["ans"+e] = `50 70`;
-window["noans1"+e] = `50`;
-window["noans2"+e] = `70`;
-window["noans3"+e] = `5070`;
+window["ans"+e] = `10 20`;
+window["noans1"+e] = `10`;
+window["noans2"+e] = `20`;
+window["noans3"+e] = `1020`;
 
 e++;
 window["type"+e] = "4";
