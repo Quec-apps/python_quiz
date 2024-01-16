@@ -116,4 +116,114 @@ window["noans1"+f] = `120`;
 window["noans2"+f] = `45`;
 window["noans3"+f] = `100`;
 
+f++;
+window["type"+f] = "4";
+window["des"+f] = ``;
+window["q"+f] =`
+def func(a, b=[]):
+    b.append(a)
+    return b
+
+print(func(1))
+print(func(2))
+`;
+window["ans"+f] = `[1] [1, 2]`;
+window["noans1"+f] = `[1, 2]`;
+window["noans2"+f] = `[1, 1, 2]`;
+window["noans3"+f] = `[1] [2]`;
+
+f++;
+window["type"+f] = "4";
+window["des"+f] = `
+<div class="small-txt">
+    Requirements:<br/>
+    <ul>
+        <li>Find the maximum subarray sum.</li>
+        <li>Parameters:</li>
+        <ul>
+            <li>arr (list): List of integers.</li>
+        </ul>
+        <li>Returns:</li>
+        <ul>
+            <li>int: Maximum subarray sum.</li>
+        </ul>
+    </ul>
+</div>
+`;
+window["q"+f] =`
+A. def max_subarray_sum(arr):
+       max_sum = float('-inf')
+       current_sum = 0
+       for num in arr:
+           current_sum = max(num, current_sum + num)
+           max_sum = max(max_sum, current_sum)
+       return max_sum
+
+B. def max_subarray_sum(arr):
+       max_sum = arr[0]
+       current_sum = arr[0]
+       for num in arr[1:]:
+           current_sum = max(num, current_sum + num)
+           max_sum = max(max_sum, current_sum)
+       return max_sum
+
+C. def max_subarray_sum(arr):
+       max_sum = 0
+       current_sum = 0
+       for num in arr:
+           current_sum = max(num, current_sum + num)
+           max_sum = max(max_sum, current_sum)
+       return max_sum
+
+D. def max_subarray_sum(arr):
+       max_sum = float('-inf')
+       current_sum = arr[0]
+       for num in arr[1:]:
+           current_sum = max(num, current_sum + num)
+           max_sum = max(max_sum, current_sum)
+       return max_sum
+`;
+window["ans"+f] = `Option A`;
+window["noans1"+f] = `Option B`;
+window["noans2"+f] = `Option C`;
+window["noans3"+f] = `Option D`;
+
+f++;
+window["type"+f] = "4";
+window["des"+f] = `
+<div class="small-txt">
+    Requirements:<br/>
+    <ul>
+        <li>Check if the given string is a palindrome.</li>
+        <li>Parameters:</li>
+        <ul>
+            <li>s (str): Input string.</li>
+        </ul>
+        <li>Returns:</li>
+        <ul>
+            <li>bool: True if the string is a palindrome, False otherwise.s</li>
+        </ul>
+    </ul>
+</div>
+`;
+window["q"+f] =`
+A. def is_palindrome(s):
+       cleaned_str = ''.join(char.lower() for char in s if char.isalnum())
+       return cleaned_str == cleaned_str[::-1]
+
+B. def is_palindrome(s):
+       return s == s[::-1]
+
+C. def is_palindrome(s):
+       cleaned_str = ''.join(char for char in s if char.isalpha())
+       return cleaned_str.lower() == cleaned_str[::-1].lower()
+
+D. def is_palindrome(s):
+       return ''.join(s.split()).lower() == ''.join(s.split())[::-1].lower()
+`;
+window["ans"+f] = `Option A`;
+window["noans1"+f] = `Option B`;
+window["noans2"+f] = `Option C`;
+window["noans3"+f] = `Option D`;
+
 weeTotal = f;
