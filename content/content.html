@@ -322,7 +322,7 @@
         function Append() {
             $("code").text(window["q" + openedLevel]);
             Prism.highlightAll();
-            $(".ques-bg").text(window["des" + openedLevel]);
+            $(".ques-bg").html(window["des" + openedLevel]);
             tmp_var = window["q" + openedLevel].replace("\n", '');
             if (tmp_var == "\n" || tmp_var == "") {
                 $(".code-bg").css({opacity:'0'});
