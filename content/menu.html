@@ -111,11 +111,6 @@
             color: #272a2c;
         }
 
-        .ct:active {
-            opacity: .4;
-            transition: none;
-        }
-
         .ct-ti {
             padding: 5px 0;
             font-size: xx-large;
@@ -163,7 +158,7 @@
         <div class="reset">Reset</div>
     </div>
     <div class="btm">
-        <div class="ct weekly-ct" onclick="CtClick('wee'); localStorage.is_weekly = 1;">
+        <div class="ct weekly-ct" onclick="localStorage.is_weekly = 1;">
             <div class="ct-ti">Weekly Challenge</div>
             <div class="ct-des">New challenges will be added weekly</div>
             <div class="ct-level-bg">
@@ -173,8 +168,12 @@
                 </div>
                 <div class="ct-level"><span id="weekly-level"></span> / <span id="weekly-total"></span></div>
             </div>
+            <div class="btn-bg">
+                <div class="btn2 red" onclick="ImproveClick('wee')">Improve</div>
+                <div class="btn2 play" onclick="CtClick('wee')">PLAY</div>
+            </div>
         </div>
-        <div class="ct" onclick="CtClick('bas')">
+        <div class="ct">
             <div class="ct-ti">Basic</div>
             <div class="ct-des">variables, datatypes, type conversion</div>
             <div class="ct-level-bg">
@@ -184,8 +183,12 @@
                 </div>
                 <div class="ct-level"><span id="basics-level"></span> / <span id="basics-total"></span></div>
             </div>
+            <div class="btn-bg">
+                <div class="btn2 red" onclick="ImproveClick('bas')">Improve</div>
+                <div class="btn2 play" onclick="CtClick('bas')">PLAY</div>
+            </div>
         </div>
-        <div class="ct" onclick="CtClick('flo')">
+        <div class="ct">
             <div class="ct-ti">Flow Control</div>
             <div class="ct-des">if...else, for loop, while loop, break & continue, pass</div>
             <div class="ct-level-bg">
@@ -195,8 +198,12 @@
                 </div>
                 <div class="ct-level"><span id="flow-level"></span> / <span id="flow-total"></span></div>
             </div>
+            <div class="btn-bg">
+                <div class="btn2 red" onclick="ImproveClick('flo')">Improve</div>
+                <div class="btn2 play" onclick="CtClick('flo')">PLAY</div>
+            </div>
         </div>
-        <div class="ct" onclick="CtClick('fun')">
+        <div class="ct">
             <div class="ct-ti">Functions</div>
             <div class="ct-des">argument, recursion, anonymous function, global and local</div>
             <div class="ct-level-bg">
@@ -206,8 +213,12 @@
                 </div>
                 <div class="ct-level"><span id="function-level"></span> / <span id="function-total"></span></div>
             </div>
+            <div class="btn-bg">
+                <div class="btn2 red" onclick="ImproveClick('fun')">Improve</div>
+                <div class="btn2 play" onclick="CtClick('fun')">PLAY</div>
+            </div>
         </div>
-        <div class="ct" onclick="CtClick('fil')">
+        <div class="ct">
             <div class="ct-ti">Files</div>
             <div class="ct-des">file operation, directory, exception, exception handling, user-defined exception</div>
             <div class="ct-level-bg">
@@ -217,8 +228,12 @@
                 </div>
                 <div class="ct-level"><span id="file-level"></span> / <span id="file-total"></span></div>
             </div>
+            <div class="btn-bg">
+                <div class="btn2 red" onclick="ImproveClick('fil')">Improve</div>
+                <div class="btn2 play" onclick="CtClick('fil')">PLAY</div>
+            </div>
         </div>
-        <div class="ct" onclick="CtClick('oop')">
+        <div class="ct">
             <div class="ct-ti">Object & Class</div>
             <div class="ct-des">OOP, class, inheritance, multiple inheritance, operator overloading</div>
             <div class="ct-level-bg">
@@ -228,8 +243,12 @@
                 </div>
                 <div class="ct-level"><span id="oops-level"></span> / <span id="oops-total"></span></div>
             </div>
+            <div class="btn-bg">
+                <div class="btn2 red" onclick="ImproveClick('oop')">Improve</div>
+                <div class="btn2 play" onclick="CtClick('oop')">PLAY</div>
+            </div>
         </div>
-        <div class="ct" onclick="CtClick('adv')">
+        <div class="ct">
             <div class="ct-ti">Advanced</div>
             <div class="ct-des">iterator, generator, closure, decorators, property, RegEx</div>
             <div class="ct-level-bg">
@@ -238,6 +257,10 @@
                     <span class="wrong-txt" id="advanced-wrong"></span>
                 </div>
                 <div class="ct-level"><span id="advanced-level"></span> / <span id="advanced-total"></span></div>
+            </div>
+            <div class="btn-bg">
+                <div class="btn2 red" onclick="ImproveClick('adv')">Improve</div>
+                <div class="btn2 play" onclick="CtClick('adv')">PLAY</div>
             </div>
         </div>
     </div>
@@ -290,6 +313,25 @@
         .btn:active {
             opacity: .7 !important;
         }
+
+        .btn-bg {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .btn2 {
+            width: 40%;
+            padding: 15px 0;
+            background-color: white;
+            color: black;
+            border-radius: 10px;
+            text-align: center;
+        } .red {
+            background-color: red;
+            color: white;
+        } .btn2:active {
+            opacity: .4;
+        }
     </style>
     <div class="reset-bg">
         <div class="reset-con">
@@ -329,37 +371,37 @@
 
         $("#basics-level").text(levelDict['bas']);
         $("#basics-total").text(basTotal);
-        $("#basics-wrong").text(wrongDict['bas']);
+        $("#basics-wrong").text(wrongDict['bas'].length);
 
         $("#flow-level").text(levelDict['flo']);
         $("#flow-total").text(floTotal);
-        $("#flow-wrong").text(wrongDict['flo']);
+        $("#flow-wrong").text(wrongDict['flo'].length);
 
         $("#function-level").text(levelDict['fun']);
         $("#function-total").text(funTotal);
-        $("#function-wrong").text(wrongDict['fun']);
+        $("#function-wrong").text(wrongDict['fun'].length);
 
         $("#file-level").text(levelDict['fil']);
         $("#file-total").text(filTotal);
-        $("#file-wrong").text(wrongDict['fil']);
+        $("#file-wrong").text(wrongDict['fil'].length);
 
         $("#oops-level").text(levelDict['oop']);
         $("#oops-total").text(oopTotal);
-        $("#oops-wrong").text(wrongDict['oop']);
+        $("#oops-wrong").text(wrongDict['oop'].length);
 
         $("#advanced-level").text(levelDict['adv']);
         $("#advanced-total").text(advTotal);
-        $("#advanced-wrong").text(wrongDict['adv']);
+        $("#advanced-wrong").text(wrongDict['adv'].length);
 
         $("#weekly-level").text(levelDict['wee']);
         $("#weekly-total").text(weeTotal);
-        $("#weekly-wrong").text(wrongDict['wee']);
+        $("#weekly-wrong").text(wrongDict['wee'].length);
 
-        $(".ct").click(function () {
+        $(".play").click(function () {
             setTimeout(() => {
-                $(this).css({
-                    transform: 'scale(10)'
-                });
+                $(".ct").css({transform: 'scale(0)'});
+                $("body").css({backgroundColor:'#3f87f2'});
+                $(".top").fadeOut();
                 setTimeout(() => {
                     $(this).css({
                         position: 'fixed'
@@ -371,6 +413,14 @@
 
         function CtClick(_type) {
             localStorage.openedType = _type;
+            setInterval(() => {
+                parent.location = "content.html";
+            }, 900);
+        }
+        localStorage.ImproveMode = 0;
+        function ImproveClick(_type) {
+            localStorage.openedType = _type;
+            localStorage.ImproveMode = 1;
             setInterval(() => {
                 parent.location = "content.html";
             }, 900);
